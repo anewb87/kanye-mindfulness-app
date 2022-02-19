@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import JournalProvider from './Contexts/JournalContext';
+import { MoodProvider } from './Contexts/MoodContext';
 import QuoteProvider from './Contexts/QuoteContext';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <QuoteProvider>
       <JournalProvider>
+        <MoodProvider>
         <div className="App">
           <Switch>
             <Route exact path="/" component={LandingPage} />
@@ -26,6 +28,7 @@ const App = () => {
             <Redirect to="/error" />
           </Switch>
         </div>
+          </MoodProvider> 
       </JournalProvider>
     </QuoteProvider>
   );
