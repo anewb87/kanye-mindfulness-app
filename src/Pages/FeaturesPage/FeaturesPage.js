@@ -10,6 +10,9 @@ const FeaturesPage = () => {
             <Link to={'/journal'}>
                 <article>Journal</article>
             </Link>
+            <Link to='/dashboard'>
+                <button>Dashboard</button>
+            </Link>
       </section>
     );
 }

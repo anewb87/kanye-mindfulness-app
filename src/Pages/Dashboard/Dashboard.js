@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext, useState } from "react";
+import Card from "../../Components/Card";
+import { JournalContext } from "../../Contexts/JournalContext";
+
 
 const Dashboard = () => {
-    return (
-        <section>
-            <h4>Dashboard</h4>
-        </section>
 
-    )
-}
+  return (
+    <section>
+      <Card />
+    </section>
+  );
+};
 
 export default Dashboard;

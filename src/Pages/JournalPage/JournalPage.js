@@ -2,6 +2,7 @@ import React, { useContext, useState }from 'react'
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import { Link } from 'react-router-dom';
 import { JournalContext } from '../../Contexts/JournalContext';
+import { createDate } from '../../Utilities/Date';
 
 const JournalPage = () => {
     
@@ -15,9 +16,15 @@ const JournalPage = () => {
         setCurrentJournal(event.target.value)
     }
 
+
     const createEntry = () => {
-        const newEntry = { id: Date.now(), body: currentJournal }
-        setJournal(...journal, newEntry)
+        const newEntry = {
+            id: Date.now(),
+            date: createDate(),
+            body: currentJournal,
+        };
+        
+        setJournal([...journal, newEntry])
     }
 
     return (

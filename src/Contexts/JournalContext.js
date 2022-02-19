@@ -7,7 +7,6 @@ const JournalProvider = (props) => {
   const [journal, setJournal] = useState([]);
 
   const journalValue = { journal, setJournal }
-  
 
   return (
     <JournalContext.Provider value={journalValue}>
