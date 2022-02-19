@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FeaturesPage = () => {
+const FeaturesPage = () => {
     return (
         <section>
             <h4>Features Page</h4>
@@ -8,3 +8,5 @@ export const FeaturesPage = () => {
 
     )
 }
+
+export default FeaturesPage;

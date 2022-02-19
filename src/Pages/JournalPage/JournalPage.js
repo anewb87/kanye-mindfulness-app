@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const JournalPage = () => {
+const JournalPage = () => {
     return (
         <section>
             <h4>Journal Page</h4>
@@ -8,3 +8,5 @@ export const JournalPage = () => {
 
     )
 }
+
+export default JournalPage;
