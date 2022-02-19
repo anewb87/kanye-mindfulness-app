@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
+import Card from "../../Components/Card";
+
 
 const Dashboard = () => {
-    return (
-        <section>
-            <h4>Dashboard</h4>
-        </section>
 
-    )
-}
+  return (
+    <section>
+      <Card />
+    </section>
+  );
+};
 
 export default Dashboard;
