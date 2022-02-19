@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import FeaturesPage from './Pages/FeaturesPage/FeaturesPage';
+import JournalPage from './Pages/JournalPage/JournalPage';
+import LandingPage from './Pages/LandingPage/LandingPage';
+import MoodPage from './Pages/MoodPage/MoodPage';
+import './reset.scss'
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Switch>
+        <Route exact path='/' component={LandingPage}/>
+        <Route exact path='/features' component={FeaturesPage}/>
+        <Route exact path='/journal' component={JournalPage} />
+        <Route exact path='/mood' component={MoodPage} />
+        <Route exact path='/dashboard' component={Dashboard} />
+        <Route exact path='/error' component={ErrorPage} />
+        <Redirect to="/error" />
+     </Switch>
     </div>
   );
 }
