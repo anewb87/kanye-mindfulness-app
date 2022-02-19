@@ -5,7 +5,6 @@ const MoodPage = () => {
         <section>
             <h4>Mood Page</h4>
         </section>
-
     )
 }
 

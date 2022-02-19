@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import Card from "../../Components/Card";
-import { JournalContext } from "../../Contexts/JournalContext";
 
 
 const Dashboard = () => {
