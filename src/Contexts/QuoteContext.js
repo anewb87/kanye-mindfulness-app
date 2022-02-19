@@ -1,5 +1,4 @@
-import { props } from "bluebird";
-import React, { useContext, useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import { getQuote } from "../apiCall";
 
 
@@ -15,6 +14,7 @@ const QuoteProvider = (props) => {
 
   return (
     <QuoteContext.Provider value={{ quote, setQuote }}>
+      {console.log(props.children)}
       {props.children}
     </QuoteContext.Provider>
   )

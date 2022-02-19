@@ -14,15 +14,15 @@ const App = () => {
   return (
     <QuoteProvider>
       <div className="App">
-      <Switch>
-          <Route exact path='/' component={LandingPage}/>
-          <Route exact path='/features' component={FeaturesPage}/>
-          <Route exact path='/journal' component={JournalPage} />
-          <Route exact path='/mood' component={MoodPage} />
-          <Route exact path='/dashboard' component={Dashboard} />
-          <Route exact path='/error' component={ErrorPage} />
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/journal" component={JournalPage} />
+          <Route exact path="/features" component={FeaturesPage} />
+          <Route exact path="/mood" component={MoodPage} />
+          <Route exact path="/error" component={ErrorPage} />
           <Redirect to="/error" />
-      </Switch>
+        </Switch>
       </div>
     </QuoteProvider>
   );
