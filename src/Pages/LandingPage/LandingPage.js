@@ -6,7 +6,7 @@ import './LandingPage.scss';
 
 const LandingPage = () => {
 
-    const { quote } = useContext(QuoteContext)
+    const { quote } = useContext(QuoteContext);
 
     return (
         <section className='landing-page'>
@@ -16,8 +16,8 @@ const LandingPage = () => {
             </Link>
         </section>
 
-    )
-}
+    );
+};
 
 
 export default LandingPage;

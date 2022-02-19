@@ -10,6 +10,6 @@ const checkResponse = (response) => {
     } else {
         return response.json()
     }
-}
+};
 
 export { getQuote }

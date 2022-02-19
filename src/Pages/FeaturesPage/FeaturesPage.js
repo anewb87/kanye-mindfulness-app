@@ -13,8 +13,8 @@ const FeaturesPage = () => {
             <Link to='/dashboard'>
                 <button>Dashboard</button>
             </Link>
-      </section>
+        </section>
     );
-}
+};
 
 export default FeaturesPage;
