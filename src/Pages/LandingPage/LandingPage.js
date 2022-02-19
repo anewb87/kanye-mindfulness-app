@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Transition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { getQuote } from '../../apiCall'
 import './LandingPage.scss';
@@ -11,6 +12,7 @@ const LandingPage = () => {
         getQuote()
         .then(data => setQuote(data.quote))
     }, [])
+
 
     return (
         <section className='landing-page'>
