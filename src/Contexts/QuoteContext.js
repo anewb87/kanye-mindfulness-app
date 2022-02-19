@@ -12,9 +12,11 @@ const QuoteProvider = (props) => {
       .then(data => setQuote(data.quote))
   }, [])
 
+  const quoteValue = { quote, setQuote }
+  // const journalValue = {journal, setJournal}
+
   return (
-    <QuoteContext.Provider value={{ quote, setQuote }}>
-      {console.log(props.children)}
+    <QuoteContext.Provider value={ quoteValue }>
       {props.children}
     </QuoteContext.Provider>
   )
