@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './LandingPage.scss';
 
 const LandingPage = () => {
     return (
-        <section>
-            <h4>Landing Page</h4>
+        <section className='landing-page'>
+            <Link to={'/features'}>
+                <button className='landing-button'>Get Mindfulness Through the Wire</button>
+            </Link>
         </section>
 
     )
