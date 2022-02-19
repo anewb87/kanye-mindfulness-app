@@ -13,8 +13,8 @@ const App = () => {
   return (
     <div className="App">
      <Switch>
-       <Route exact path='/' render={LandingPage}/>
-       <Route exact path='/features' component={FeaturesPage}/>
+        <Route exact path='/' component={LandingPage}/>
+        <Route exact path='/features' component={FeaturesPage}/>
         <Route exact path='/journal' component={JournalPage} />
         <Route exact path='/mood' component={MoodPage} />
         <Route exact path='/dashboard' component={Dashboard} />
