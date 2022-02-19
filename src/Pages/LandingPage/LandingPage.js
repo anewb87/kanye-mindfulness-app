@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Transition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
+import { QuoteContext } from '../../Contexts/QuoteContext';
 import { getQuote } from '../../apiCall'
 import './LandingPage.scss';
 
 const LandingPage = () => {
 
-    const [quote, setQuote] = useState('');
-
-    useEffect(() => {
-        getQuote()
-        .then(data => setQuote(data.quote))
-    }, [])
-
+    const { quote } = useContext(QuoteContext)
 
     return (
         <section className='landing-page'>
