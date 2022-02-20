@@ -1,0 +1,66 @@
+.dashboard-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px black solid;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7e1e9;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.dashboard-page > h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.dashboard-quote {
+    font-style: italic;
+    width: 35%;
+    height: 10%;
+    padding: 2%;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.stats-section {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    &:article {
+        background-color: whitesmoke;
+        color: black;
+        width: 15%;
+        height: 15%;
+    }
+}
+
+.mood-section {
+    width: 100vw;
+    border: 5px solid red;
+}
+
+.journal-section {
+    width: 100vw;
+    border: 5px solid blue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+
+
