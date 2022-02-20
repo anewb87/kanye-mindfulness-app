@@ -27,8 +27,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: whitesmoke solid 6px;
+        border-radius: 10%;
+        transition: all 0.3s;
+
+
+
+    }
+
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: whitesmoke solid 6px;
+        border-radius: 10%;
+        transition: all 0.3s;
+
+
+    }
 
 }
+//This block of code would add words on hover. They do not consistenly show up unfortunately so I thought it would be best to revisit. 
+// .feature-title {
+//     opacity: 0;
+//     transition: all 0.3s;
+//     &:hover {
+//         opacity: 1;
+//     }
+
+//     &:focus {
+//         opacity: 1;
+//     }
+// }
 
 .dashboard-btn-section {
     border: 5px yellow solid;
