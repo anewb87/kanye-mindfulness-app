@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import './JournalPage.scss'
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import { Link } from 'react-router-dom';
 import { JournalContext } from '../../Contexts/JournalContext';
@@ -28,7 +29,7 @@ const JournalPage = () => {
     };
 
     return (
-        <section>
+        <section className='journal-page'>
             <h4>{quote}</h4>
             <form>
                 <textarea
