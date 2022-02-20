@@ -1,28 +1,49 @@
 import React, { useContext, useState } from 'react'
 import { MoodContext } from '../../Contexts/MoodContext';
 import { QuoteContext } from '../../Contexts/QuoteContext';
-// import Slider from '../../Components/Slider'
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 
 const MoodPage = () => {
 
-    const [ currentMood, setCurrentMood ] = useState(0);
+    const [ currentMood, setCurrentMood ] = useState(3);
 
     const { quote } = useContext(QuoteContext);
     const { mood, setMood } = useContext(MoodContext);
 
     const handleChange = (value) => {
-        // event.preventDefault()
         setCurrentMood(value)
     
+    }
+
+    const setImages = (currentMood) => {
+        let emoji;
+        switch(currentMood) {
+            case 1: 
+                emoji='😠'; 
+                break;
+            case 2:
+               emoji='😕';
+               break;
+            case 3:
+                emoji='😑';
+                break;
+            case 4:
+                emoji='😌';
+                break;
+            case 5:
+                emoji='😺';
+                break;
+
+        }
+        return emoji;
     }
     
     return (
         <section style={{width: '500px'}}>
             <h4>Mood Page</h4>
-            <p>Current Value: {currentMood}</p>
+            <p>Current Value: {setImages(currentMood)}</p>
             <Slider 
                 defaultValue='1'
                 min={1}
