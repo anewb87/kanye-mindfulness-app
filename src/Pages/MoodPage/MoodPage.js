@@ -3,6 +3,8 @@ import { MoodContext } from '../../Contexts/MoodContext';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { Link } from 'react-router-dom';
+import { createDate } from '../../Utilities/Date';
 
 
 const MoodPage = () => {
@@ -39,6 +41,17 @@ const MoodPage = () => {
         }
         return emoji;
     }
+
+    const handleSubmit = () => {
+        const newMood = {
+            id: Date.now(),
+            date: createDate(),
+            todaysMood: currentMood
+        };
+
+        setMood([...mood, newMood])
+
+    }
     
     return (
         <section style={{width: '500px'}}>
@@ -48,9 +61,11 @@ const MoodPage = () => {
                 defaultValue='1'
                 min={1}
                 max={5}
+                dots={true}
                 value={currentMood}
                 onChange={value => handleChange(value)}     
             />
+            <Link to="/dashboard"><button onClick={handleSubmit}>Submit</button></Link>
 
         </section>
     );
