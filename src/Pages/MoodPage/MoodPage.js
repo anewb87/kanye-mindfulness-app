@@ -5,6 +5,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
 import { createDate } from '../../Utilities/Date';
+import setImages from '../../Utilities/SetImages';
 
 
 const MoodPage = () => {
@@ -19,28 +20,6 @@ const MoodPage = () => {
     
     }
 
-    const setImages = (currentMood) => {
-        let emoji;
-        switch(currentMood) {
-            case 1: 
-                emoji='😠'; 
-                break;
-            case 2:
-               emoji='😕';
-               break;
-            case 3:
-                emoji='😑';
-                break;
-            case 4:
-                emoji='😌';
-                break;
-            case 5:
-                emoji='😺';
-                break;
-
-        }
-        return emoji;
-    }
 
     const handleSubmit = () => {
         const newMood = {
