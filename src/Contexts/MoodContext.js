@@ -5,7 +5,6 @@ export const MoodContext = createContext()
 export const MoodProvider = (props) => {
 
 const [ mood, setMood ] = useState([])
-// const [ singleMood, setSingleMood ] = useState({})
 
 const moodValue = { mood, setMood } 
 
