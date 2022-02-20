@@ -1,0 +1,27 @@
+.feature-tiles {
+    border: 5px blue solid;
+    width: 100vw;
+    height: 75vh;
+    // display: flex;
+    // justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.single-feat-tile {
+    border: 5px red solid;
+    width: 30vw;
+    height: 25vh;
+    padding: 0%;
+    border: 0%;
+    margin: 0%;
+
+}
+
+.dashboard-btn-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
