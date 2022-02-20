@@ -1,0 +1,101 @@
+.feature-page {
+    background-color: #f7e1e9;
+    width: 100vw;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.feature-tiles {
+    border: 5px blue solid;
+    width: 100vw;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.single-feat-tile {
+    border: 5px red solid;
+    width: 25vw;
+    height: 25vh;
+    padding: 0%;
+    border: 0%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: whitesmoke solid 6px;
+        border-radius: 10%;
+        transition: all 0.3s;
+
+
+
+    }
+
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: whitesmoke solid 6px;
+        border-radius: 10%;
+        transition: all 0.3s;
+
+
+    }
+
+}
+//This block of code would add words on hover. They do not consistenly show up unfortunately so I thought it would be best to revisit. 
+// .feature-title {
+//     opacity: 0;
+//     transition: all 0.3s;
+//     &:hover {
+//         opacity: 1;
+//     }
+
+//     &:focus {
+//         opacity: 1;
+//     }
+// }
+
+.dashboard-btn-section {
+    border: 5px yellow solid;
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    width: 200px;
+    height: 65px;
+    box-shadow: none;
+    border: 3px white solid;
+    border-radius: 10%;
+    background-color: #f7e1e9;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: pink solid 6px;
+        border-radius: 10%;
+
+
+    }
+
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+        border: pink solid 6px;
+        border-radius: 10%;
+
+    }
+}

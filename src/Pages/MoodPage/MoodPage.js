@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react';
+import './MoodPage.scss'
 import { MoodContext } from '../../Contexts/MoodContext';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
@@ -33,20 +34,23 @@ const MoodPage = () => {
     }
     
     return (
-        <section style={{width: '500px'}}>
-            <h4>Mood Page</h4>
-            <p>Current Value: {setImages(currentMood)}</p>
-            <Slider 
-                defaultValue='1'
-                min={1}
-                max={5}
-                dots={true}
-                value={currentMood}
-                onChange={value => handleChange(value)}     
-            />
-            <Link to="/dashboard"><button onClick={handleSubmit}>Submit</button></Link>
-
+        <section className='mood-page'>
+            <h2>Mood Page</h2>
+            <h4>How ya feeling today</h4>
+                <p>Current Value: {setImages(currentMood)}</p>
+                <section style={{width: '500px'}}>
+                <Slider 
+                    defaultValue='1'
+                    min={1}
+                    max={5}
+                    dots={true}
+                    value={currentMood}
+                    onChange={value => handleChange(value)}     
+                    />
+            </section>
+                <Link to="/dashboard"><button onClick={handleSubmit}>Submit</button></Link>
         </section>
+
     );
 };
 
