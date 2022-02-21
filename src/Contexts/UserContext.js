@@ -6,25 +6,33 @@ export const UserContext = createContext()
 const UserProvider = (props) => {
 
     const [user, setUser] = useState({})
+    // const userValue = {user, setUser}
 
     const [journal, setJournal] = useState([]);
-    const journalValue = { journal, setJournal }
+    // const journalValue = { journal, setJournal }
 
     const [mood, setMood] = useState([])
-    const moodValue = { mood, setMood }
+    // const moodValue = { mood, setMood }
+
+    const values = { user, setUser, journal, setJournal, mood, setMood}
 
     useEffect(() => {
         getUser()
-            .then(data => setUser(data))
+            .then(data => setData(data))
     }, [])
 
-    setJournal(user.journal)
-    setMood(user.moods)
-    // console.log(user.moods)
-    // console.log(user.journal)
+    const setData = (data) => {
+        setUser(data.firstName)
+        setJournal(data.journal)
+        setMood(data.moods)
+    }
+
+    console.log(user)
+    console.log(mood)
+    console.log(journal)
 
     return (
-        <UserContext.Provider value={ journalValue, moodValue } >
+        <UserContext.Provider value={ values } >
             {props.children}
         </UserContext.Provider>
     )

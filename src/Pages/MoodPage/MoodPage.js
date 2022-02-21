@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './MoodPage.scss'
 import { MoodContext } from '../../Contexts/MoodContext';
+import { UserContext } from '../../Contexts/UserContext';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -13,8 +14,12 @@ const MoodPage = () => {
 
     const [ currentMood, setCurrentMood ] = useState(3);
 
+    const [mood, setMood] = useState([])
+    const moodValue = { mood, setMood }
+
     const { quote } = useContext(QuoteContext);
-    const { mood, setMood } = useContext(MoodContext);
+    // const { mood, setMood } = useContext(MoodContext);
+    const { user, setUser } = useContext(UserContext);
 
     const handleChange = (value) => {
         setCurrentMood(value)
@@ -29,7 +34,7 @@ const MoodPage = () => {
             todaysMood: currentMood
         };
 
-        setMood([...mood, newMood])
+        setMood([...user.moods, newMood])
 
     }
     
