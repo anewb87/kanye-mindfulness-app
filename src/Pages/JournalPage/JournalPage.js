@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import './JournalPage.scss'
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import { Link } from 'react-router-dom';
-import { JournalContext } from '../../Contexts/JournalContext';
+import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
 
 const JournalPage = () => {
@@ -10,13 +10,12 @@ const JournalPage = () => {
     const [currentJournal, setCurrentJournal] = useState();
 
     const { quote } = useContext(QuoteContext);
-    const { journal, setJournal } = useContext(JournalContext);
+    const { journal, setJournal } = useContext(UserContext);
 
     const handleChange = (event) => {
         event.preventDefault();
         setCurrentJournal(event.target.value);
     };
-
 
     const createEntry = () => {
         const newEntry = {

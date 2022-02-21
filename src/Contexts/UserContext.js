@@ -6,13 +6,10 @@ export const UserContext = createContext()
 const UserProvider = (props) => {
 
     const [user, setUser] = useState({})
-    // const userValue = {user, setUser}
 
     const [journal, setJournal] = useState([]);
-    // const journalValue = { journal, setJournal }
 
     const [mood, setMood] = useState([])
-    // const moodValue = { mood, setMood }
 
     const values = { user, setUser, journal, setJournal, mood, setMood}
 
@@ -26,10 +23,6 @@ const UserProvider = (props) => {
         setJournal(data.journal)
         setMood(data.moods)
     }
-
-    console.log(user)
-    console.log(mood)
-    console.log(journal)
 
     return (
         <UserContext.Provider value={ values } >

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { JournalContext } from "../Contexts/JournalContext";
+import { UserContext } from "../Contexts/UserContext";
 
 const Card = () => {
   
-  const { journal } = useContext(JournalContext);
+  const { journal } = useContext(UserContext);
  
   const entries = journal.map((entry) => {
     return (

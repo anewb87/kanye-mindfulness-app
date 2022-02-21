@@ -5,14 +5,13 @@ import setImages from "../Utilities/SetImages";
 
 const MoodCard = () => {
   
-    const { user } = useContext(UserContext);
-    // console.log(user)
+    const { mood } = useContext(UserContext);
    
-    const moods = user.moods.map((feeling) => {
+    const moods = mood.map((feeling) => {
       return (
         <article key={feeling.id}>
           <h2>{feeling.date}</h2>
-          <p>{setImages(feeling.todaysMood)}</p>
+          <p>{setImages(feeling.mood)}</p>
         </article>
       )
     });
