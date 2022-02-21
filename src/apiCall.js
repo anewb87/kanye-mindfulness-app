@@ -1,7 +1,11 @@
 const getQuote = () => {
     return fetch('https://api.kanye.rest/')
     .then(response => checkResponse(response))
-    
+}
+
+const getUser = () => {
+    return fetch('http://localhost:4020/')
+    .then(response => checkResponse(response))
 }
 
 const checkResponse = (response) => {
@@ -12,4 +16,4 @@ const checkResponse = (response) => {
     }
 };
 
-export { getQuote }
+export { getQuote, getUser }
