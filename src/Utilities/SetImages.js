@@ -30,7 +30,10 @@ const setImages = (mood) => {
             break;
 
     }
-    return `<img src=${emoji} alt=${emotion}/>`;
-}
+    return (
+    <>
+      <img src={emoji} alt={emotion}/>
+    </>
+)}
 
 export default setImages;
