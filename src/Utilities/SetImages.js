@@ -32,7 +32,7 @@ const setImages = (mood) => {
     }
     return (
     <>
-      <img src={emoji} alt={emotion}/>
+      <img className="kanye-mood dashboard-face" src={emoji} alt={emotion}/>
     </>
 )}
 
