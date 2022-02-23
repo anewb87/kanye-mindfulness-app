@@ -46,7 +46,7 @@ const MoodPage = () => {
                     onChange={value => handleChange(value)}
                     />
             </section>
-                <Link to="/dashboard"><button onClick={handleSubmit}>Submit</button></Link>
+                <Link to="/dashboard" data-testid='submit-link' onClick={handleSubmit}>Submit</Link>
         </section>
 
     );

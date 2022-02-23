@@ -9,7 +9,7 @@ const MoodCard = () => {
 
     const moods = mood.map((feeling) => {
       return (
-        <article key={feeling.id}>
+        <article key={feeling.id} data-testid='mood-card'>
           <h2>{feeling.date}</h2>
           {setImages(feeling.mood)}
         </article>
