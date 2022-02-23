@@ -3,7 +3,7 @@ describe('Landing page', () => {
         cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
         cy.intercept('GET', 'https://localhost:4020', { fixture: 'kanyeQuote.json' })
         cy.visit('http://localhost:3000')
-    })
+    });
   it('Should have a background image', () => {
     cy.get('[data-testid=landing-page]')
       .should('have.css', 'background-image')
