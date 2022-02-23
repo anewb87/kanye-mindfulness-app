@@ -6,6 +6,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
 import { createDate } from '../../Utilities/Date';
+import { updateUser } from '../../apiCall';
 import setImages from '../../Utilities/SetImages';
 
 
@@ -14,7 +15,7 @@ const MoodPage = () => {
     const { quote } = useContext(QuoteContext);
     const [ currentMood, setCurrentMood ] = useState(3);
 
-    const { mood, setMood} = useContext(UserContext);
+    const { mood, setMood } = useContext(UserContext);
 
 
     const handleChange = (value) => {
@@ -25,18 +26,21 @@ const MoodPage = () => {
         const newMood = {
             id: Date.now(),
             date: createDate(),
-            mood: currentMood
+            mood: currentMood,
+            type: 'mood'
         };
 
-        setMood([...mood, newMood])
+
+        updateUser(newMood)
+            .then(entry => setMood([...mood, entry]))
     }
 
     return (
         <section className='mood-page'>
             <h2>Mood Page</h2>
             <h4>How ya feeling today</h4>
-                {setImages(currentMood)}
-                <section style={{width: '500px'}}>
+            {setImages(currentMood)}
+            <section style={{width: '500px'}}>
                 <Slider
                     defaultValue='1'
                     min={1}
@@ -44,7 +48,7 @@ const MoodPage = () => {
                     dots={true}
                     value={currentMood}
                     onChange={value => handleChange(value)}
-                    />
+                />
             </section>
                 <Link to="/dashboard" data-testid='submit-link' onClick={handleSubmit}>Submit</Link>
         </section>
