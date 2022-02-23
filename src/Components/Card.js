@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
 
-const Card = () => {
+const Card = (props) => {
   
   const { journal } = useContext(UserContext);
  
@@ -13,6 +13,7 @@ const Card = () => {
       </article>
     )
   });
+  console.log(props)
 
   return (
     <>

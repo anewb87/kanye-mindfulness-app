@@ -22,7 +22,7 @@ const MoodPage = () => {
         setCurrentMood(value)
     }
 
-    async const handleSubmit = () => {
+    const handleSubmit = () => {
         const newMood = {
             id: Date.now(),
             date: createDate(),
@@ -39,8 +39,8 @@ const MoodPage = () => {
         <section className='mood-page'>
             <h2>Mood Page</h2>
             <h4>How ya feeling today</h4>
-                {setImages(currentMood)}
-                <section style={{width: '500px'}}>
+            {setImages(currentMood)}
+            <section style={{width: '500px'}}>
                 <Slider
                     defaultValue='1'
                     min={1}
@@ -48,9 +48,9 @@ const MoodPage = () => {
                     dots={true}
                     value={currentMood}
                     onChange={value => handleChange(value)}
-                    />
+                />
             </section>
-                <Link to="/dashboard"><button onClick={handleSubmit}>Submit</button></Link>
+            <Link to="/dashboard" onClick={handleSubmit}>Submit</Link>
         </section>
 
     );

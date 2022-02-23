@@ -9,7 +9,7 @@ const getUser = () => {
 }
 
 const updateUser = (newPost) => {
-    fetch('http://localhost:4020/', {
+    return fetch('http://localhost:4020/', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
