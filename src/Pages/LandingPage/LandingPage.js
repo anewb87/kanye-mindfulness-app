@@ -11,15 +11,15 @@ const LandingPage = () => {
 
 
     return (
-        <section className='landing-page'>
+        <section className='landing-page' data-testid='landing-page'>
             <article className='open-quote fade-in-fwd'>
                 <h1>{quote}</h1>
             </article>
             <Delayed>
                 <Link to={'/features'}>
-                    <button className='landing-button fade-in-fwd'>THROUGH THE WIRE</button>
+                    <button className='landing-button fade-in-fwd' data-testid='landing-button'>THROUGH THE WIRE</button>
                 </Link>
-            </Delayed>   
+            </Delayed>
         </section>
 
     );

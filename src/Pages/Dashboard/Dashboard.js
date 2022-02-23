@@ -22,7 +22,7 @@ const Dashboard = () => {
         <article>Stat 2</article>
         <article>Stat 3</article>
       </section>
-      <section className='mood-section'>
+      <section className='mood-section' data-testid='mood-section'>
         <MoodCard />
       </section>
       <section className="journal-section">

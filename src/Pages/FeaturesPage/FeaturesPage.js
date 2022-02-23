@@ -7,25 +7,25 @@ const FeaturesPage = () => {
         <section className='feature-page'>
             <section className='feature-tiles'>
                 <Link to={'/mood'}>
-                    <article className='single-feat-tile'>
-                        <p className='feature-title'>Mood</p>    
+                    <article className='single-feat-tile' data-testid='single-feature-tile'>
+                        <p className='feature-title'>Mood</p>
                     </article>
                 </Link>
                 <Link to={'/journal'}>
-                    <article className='single-feat-tile' id='featureTitle'>
-                        <p className='feature-title'>Journal</p>    
+                    <article className='single-feat-tile' id='featureTitle' data-testid='single-feature-tile'>
+                        <p className='feature-title'>Journal</p>
                     </article>
                 </Link>
-                <article className='single-feat-tile'>
-                     <p className='feature-title'>Meditation</p>    
+                <article className='single-feat-tile' data-testid='single-feature-tile'>
+                     <p className='feature-title'>Meditation</p>
                 </article>
-                <article className='single-feat-tile'>
-                    <p className='feature-title'>Sleep Tracker</p>    
+                <article className='single-feat-tile' data-testid='single-feature-tile'>
+                    <p className='feature-title'>Sleep Tracker</p>
                 </article>
             </section>
             <section className='dashboard-btn-section'>
-                <Link to='/dashboard'>
-                    <button>Dashboard</button>
+                <Link to='/dashboard' data-testid='dashboard-link'>
+                  Dashboard
                 </Link>
             </section>
         </section>
