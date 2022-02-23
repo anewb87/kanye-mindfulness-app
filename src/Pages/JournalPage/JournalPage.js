@@ -4,6 +4,7 @@ import { QuoteContext } from '../../Contexts/QuoteContext';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
+import { updateUser } from '../../apiCall';
 
 const JournalPage = () => {
     
@@ -22,9 +23,11 @@ const JournalPage = () => {
             id: Date.now(),
             date: createDate(),
             body: currentJournal,
+            type: 'journal'
         };
         
-        setJournal([...journal, newEntry]);
+        updateUser(newEntry)
+            .then(entry => setJournal([...journal, entry]))
     };
 
     return (
