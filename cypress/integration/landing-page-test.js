@@ -17,7 +17,7 @@ describe('Landing page', () => {
     cy.get('[data-testid=landing-button]')
       .should('be.visible')
       .click()
-    cy.server()
-    cy.route('/features')
+      .server()
+      .route('/features')
   });
 });

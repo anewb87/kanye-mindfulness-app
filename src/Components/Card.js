@@ -7,9 +7,9 @@ const Card = (props) => {
  
   const entries = journal.map((entry) => {
     return (
-      <article key={entry.id}>
+      <article data-testid='journal-entry' key={entry.id}>
         <h2>{entry.date}</h2>
-        <p>{entry.body}...</p>
+        <p>{entry.body}</p>
       </article>
     )
   });
