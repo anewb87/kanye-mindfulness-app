@@ -1,5 +1,6 @@
 // @import '../../SASS/slide-ins.scss';
 // @import '.slide-right';
+@use '../../SASS/keyframes';
 
 .feature-page {
     background-color: #f7e1e9;
@@ -15,24 +16,21 @@
     width: 100vw;
     height: 75vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     align-items: center;
     justify-items: center;
+    grid-gap: 10%;
 }
 
-.single-feat-tile {
-    width: 25vw;
-    // height: 25vh;
-    padding: 0%;
-    border: 0%;
-    margin: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.single-feat-tile-1 {
+    width: 70%;
+}
+
+.single-feat-tile-2 {
+    width: 70%;
 }
 
 .bear-image {
-    // @include slide-right;
     height: 100%;
     width: 100%;
 
@@ -56,6 +54,11 @@
 .slide-right {
 	-webkit-animation: slide-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-left {
+	-webkit-animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 //This block of code would add words on hover. They do not consistenly show up unfortunately so I thought it would be best to revisit.
 // .feature-title {
