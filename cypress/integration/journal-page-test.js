@@ -1,16 +1,13 @@
-import { getByAltText } from "@testing-library/react";
-
 describe('Journal page', () => {
     beforeEach(() => {
         cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
-        // cy.intercept('GET', 'https://localhost:4020', { fixture: 'kanyeQuote.json' })
         cy.visit('http://localhost:3000/journal')
     });
 
     it('Should display the quote of the day', () => {
         cy.get('h4')
             .should('have.text', 'You may be talented, but you’re not Kanye West.')
-    })
+    });
 
     it('Should be able create a journal entry and submit/POST that entry', () => {
         cy.get('textarea')
@@ -27,5 +24,5 @@ describe('Journal page', () => {
             .get('p')
             .last()
             .should('have.text', 'Kanye. What a guy.')
-    })
+    });
 })

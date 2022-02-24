@@ -1,14 +1,14 @@
 describe('Mood page', () => {
-  beforeEach(() =>{
+  beforeEach(() => {
     cy.visit('http://localhost:3000/mood')
   });
 
-  it('Should have a kanye face', () => {
+  it('Should have a Kanye face', () => {
     cy.get('img')
       .should('have.attr', 'src', '/static/media/kanye3.42c9905149cdaf49e335.png')
   });
 
-  it("Should have a slider that changes the kanye value and face", () => {
+  it("Should have a slider that changes the Kanye value and face", () => {
 
     const currentValue  = 3;
     const targetValue = 4;
@@ -24,7 +24,7 @@ describe('Mood page', () => {
       .should('have.attr', 'aria-valuenow', 4)
   });
 
-  it("Should have a submit link", () => {
+  it("Should have a submit link that posts the mood", () => {
     cy.get('[data-testid=submit-link]')
       .click()
       .url()
@@ -33,4 +33,5 @@ describe('Mood page', () => {
       .its('length')
       .should('be.gt', 4)
   });
-});
+
+})

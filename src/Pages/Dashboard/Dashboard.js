@@ -14,7 +14,7 @@ const Dashboard = () => {
     <section className='dashboard-page'>
       <h2>Welcome, User! 💎 </h2>
       <Nav />
-      <article className='dashboard-quote'>
+      <article data-testid='dashboard-quote' className='dashboard-quote'>
         { quote }
       </article>
       <section className='stats-section'>
