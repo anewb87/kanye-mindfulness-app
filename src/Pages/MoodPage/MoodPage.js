@@ -36,23 +36,35 @@ const MoodPage = () => {
     }
 
     return (
-        <section className='mood-page'>
-            <h2>Mood Page</h2>
-            <h4>How ya feeling today</h4>
-            {setImages(currentMood)}
-            <section style={{width: '500px'}}>
-                <Slider
-                    defaultValue='1'
-                    min={1}
-                    max={5}
-                    dots={true}
-                    value={currentMood}
-                    onChange={value => handleChange(value)}
-                />
-            </section>
-                <Link to="/dashboard" data-testid='submit-link' onClick={handleSubmit}>Submit</Link>
+      <section className="mood-page">
+        <h2>Mood Page</h2>
+        <h4>How ya feeling today</h4>
+        {setImages(currentMood)}
+        <section style={{ width: "500px" }}>
+          <Slider
+            trackStyle={{
+              background: "red",
+                    }}
+            dotStyle={{
+                background: "red",
+                border: 'none'
+                }}
+            handleStyle={{
+                background: "red",
+                border: "none"
+            }}
+            defaultValue="1"
+            min={1}
+            max={5}
+            dots={true}
+            value={currentMood}
+            onChange={(value) => handleChange(value)}
+          />
         </section>
-
+        <Link to="/dashboard" data-testid="submit-link" onClick={handleSubmit}>
+          Submit
+        </Link>
+      </section>
     );
 };
 
