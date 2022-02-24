@@ -7,7 +7,7 @@ import { createDate } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
 
 const JournalPage = () => {
-    
+
     const [currentJournal, setCurrentJournal] = useState();
 
     const { quote } = useContext(QuoteContext);
@@ -25,7 +25,7 @@ const JournalPage = () => {
             body: currentJournal,
             type: 'journal'
         };
-        
+
         updateUser(newEntry)
             .then(entry => setJournal([...journal, entry]))
     };
@@ -41,9 +41,7 @@ const JournalPage = () => {
                     cols="50"
                     onChange={(event) => handleChange(event)} placeholder="How do Kanye's wise words inspire YOU..."></textarea>
                 <br />
-                <Link to={'/dashboard'}>
-                    <button onClick={createEntry}>Submit</button>
-                </Link>
+                <Link to={'/dashboard'}onClick={createEntry}>Submit</Link>
             </form>
         </section>
     );
