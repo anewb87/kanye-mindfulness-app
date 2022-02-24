@@ -8,7 +8,7 @@ import FeaturesPage from './Pages/FeaturesPage/FeaturesPage';
 import JournalPage from './Pages/JournalPage/JournalPage';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import MoodPage from './Pages/MoodPage/MoodPage';
-import './reset.scss'
+import './SASS/base.scss'
 
 
 const App = () => {
