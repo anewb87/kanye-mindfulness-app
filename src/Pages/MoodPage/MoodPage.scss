@@ -6,12 +6,27 @@
     border: 5px black solid;
     width: 100vw;
     height: 100vh;
-    background-color: #f7e1e9;
+    background-image: url('../../Assets/808heart.png');
+    background-size: cover;
+    background-color: #CBDFDF;
     font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
+    color: red;
     font-weight: 600;
+    font-size: xx-large;
 }
 
 .kanye-mood{
-  width:50px;
+  width: 250px;
+}
+
+.mood-page > a {
+  text-decoration: none;
+  border: dotted 3px red;
+  border-radius: 10px;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  &:hover {
+    color: red;
+    border: dotted 3px white;
+  }
 }
