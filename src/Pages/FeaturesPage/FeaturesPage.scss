@@ -9,6 +9,10 @@
     font-weight: 600;
 }
 
+p {
+    color: white;
+}
+
 .feature-tiles {
     width: 100vw;
     height: 75vh;
@@ -21,23 +25,60 @@
 .bear-image {
     height: 80%;
     width: 80%;
-     &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        border: whitesmoke solid 6px;
-        border-radius: 10%;
-        transition: all 0.3s;
+    border-radius: 25px;
+    
+    //  &:hover {
+    //     cursor: pointer;
+    //     transform: scale(1.1);
+    //     border: whitesmoke solid 6px;
+    //     border-radius: 10%;
+    //     transition: all 0.3s;
         
-        // background-image: url('../../Assets/Bears/bw-mood.jpg');
-    }
+    //     // background-image: url('../../Assets/Bears/bw-mood.jpg');
+    // }
 
-    &:focus {
-        cursor: pointer;
-        transform: scale(1.1);
-        border: whitesmoke solid 6px;
-        border-radius: 10%;
-        transition: all 0.3s;
-    }
+    // &:focus {
+    //     cursor: pointer;
+    //     transform: scale(1.1);
+    //     border: whitesmoke solid 6px;
+    //     border-radius: 10%;
+    //     transition: all 0.3s;
+    // }
+}
+
+.flip-container {
+    perspective: 1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+    left: 0;
+    // color: cornSilk;
+    // text-align: center;
+    // font: 3em/240px 'Helvetica Neue', Helvetica, sans-serif;
+    // box-shadow: -5px 5px 5px #aaa;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    // background: cornflowerBlue;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .slide-right {
