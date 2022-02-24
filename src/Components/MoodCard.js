@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
-import { MoodContext } from "../Contexts/MoodContext";
 import setImages from "../Utilities/SetImages";
 
 const MoodCard = () => {
