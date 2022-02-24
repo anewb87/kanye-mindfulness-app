@@ -6,32 +6,18 @@ import journalBear from '../../Assets/Bears/journal-bear.jpg';
 import './FeaturesPage.scss';
 
 const FeaturesPage = () => {
+    const linkStyle = {
+        width: '350px',
+    }
     return (
         <section className='feature-page'>
             <section className='feature-tiles'>
-                <Link to={'/mood'}>
-                    <article className='single-feat-tile-1' data-testid='single-feature-tile'>
+                <Link to={'/mood'} style={linkStyle}>
                         <img className='bear-image' src={moodBear} alt='mood bear feature icon to take to mood checkin page'/>
-                        {/* <div className='overlay'>
-                            <div className='content'>
-                                <p className='feature-title'>MOOD</p>
-                                <img className='bear-hover' src={moodHoverBear} alt='black and white hover mood bear'/>
-                            </div>
-                        </div> */}
-                    </article>
                 </Link>
-                <Link to={'/journal'}>
-                    <article className='single-feat-tile-2' id='featureTitle' data-testid='single-feature-tile'>
-                        <img className='bear-image' src={journalBear} alt='journal bear feature icon to take to mood checkin page' />
-                        {/* <p className='feature-title'>Journal</p> */}
-                    </article>
+                <Link to={'/journal'} style={linkStyle}>
+                    <img className='bear-image' src={journalBear} alt='journal bear feature icon to take to mood checkin page' />
                 </Link>
-                {/* <article className='single-feat-tile' data-testid='single-feature-tile'>
-                     <p className='feature-title'>Meditation</p>
-                </article>
-                <article className='single-feat-tile' data-testid='single-feature-tile'>
-                    <p className='feature-title'>Sleep Tracker</p>
-                </article> */}
             </section>
             <section className='dashboard-btn-section'>
                 <Link to='/dashboard' data-testid='dashboard-link'>
