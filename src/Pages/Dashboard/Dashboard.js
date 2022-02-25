@@ -12,11 +12,13 @@ import MoodContainer from "../../Components/MoodContainer";
 const Dashboard = () => {
 
   const { quote } = useContext(QuoteContext);
+  const { user } = useContext(UserContext);
+  // console.log(user.firstName)
  
 
   return (
     <section className='dashboard-page'>
-      <h2>Welcome, User! 💎 </h2>
+      <h2>Welcome, { user[0] }! 💎 </h2>
       <Nav />
       <article data-testid='dashboard-quote' className='dashboard-quote'>
         { quote }
