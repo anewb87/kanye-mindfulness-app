@@ -1,25 +1,16 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
+import './Card.scss'
 
-const Card = (props) => {
-  
-  const { journal } = useContext(UserContext);
- 
-  const entries = journal.map((entry) => {
-    return (
-      <article data-testid='journal-entry' key={entry.id}>
-        <h2>{entry.date}</h2>
-        <p>{entry.body}</p>
-      </article>
-    )
-  });
-  console.log(props)
 
+const Card = ({ date, body, id }) => {
   return (
-    <>
-      {entries}
-    </>
+    <article className='journal-card' key={id}>
+      <h3>{date}</h3>
+      <p>{body}</p>
+    </article>
   )
 }
 
-export default Card
+
+export default Card;
