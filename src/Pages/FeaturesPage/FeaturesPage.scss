@@ -22,10 +22,16 @@
 .bear-image {
     width: 350px;
     border-radius: 25px;
-    // box-shadow: 9px 9px 23px 0px rgba(248,134,80,0.65)
-    box-shadow: 9px 9px 31px 10px rgba(95,28,115,0.72)
+    box-shadow: 9px 9px 31px 10px rgba(95,28,115,0.72);
+}
 
-
+.feature-link:focus {
+    transform: scale(1.2);
+    transition: 0.3s all;
+    border: 10px solid #F88650;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
 }
 
 .dashboard-link {
