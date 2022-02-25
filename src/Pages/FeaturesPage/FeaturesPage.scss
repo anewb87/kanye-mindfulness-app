@@ -142,32 +142,3 @@ p {
     justify-content: center;
     align-items: center;
 }
-
-button {
-    font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
-    font-weight: 600;
-    width: 200px;
-    height: 65px;
-    box-shadow: none;
-    border: 3px white solid;
-    border-radius: 10%;
-    background-color: #f7e1e9;
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        border: pink solid 6px;
-        border-radius: 10%;
-
-
-    }
-
-    &:focus {
-        cursor: pointer;
-        transform: scale(1.1);
-        border: pink solid 6px;
-        border-radius: 10%;
-
-    }
-}

@@ -14,26 +14,62 @@
     align-items: center;
 }
 
-.open-quote {
-    font-size: x-large;
-    width: 60%;
-    height: 38%;
-    align-self: center;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 10%;
-    text-align: center;
+.title {
+    font-size: 12vw;
 }
 
+.open-quote {
+    position: absolute;
+    top: 73%;
+    font-size: 2vw;
+    width: 65%;
+    height: 38%;
+    align-self: center;
+    text-align: center;
+    text-shadow: 2px 1px 10px  black;
+    margin-top: 3%
+}
 
 .landing-button {
+    margin-top: 4%;
     box-shadow: none;
-    margin-top: 25px;
     background-color: black;
     color: whitesmoke;
-    border: 2px solid whitesmoke;
+    border: none;
+    padding: 5px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 }
+
+
+// button {
+//     font-family: 'Montserrat', sans-serif;
+//     color: whitesmoke;
+//     font-weight: 600;
+//     width: 200px;
+//     height: 65px;
+//     box-shadow: none;
+//     border: 3px white solid;
+//     border-radius: 10px;
+
+//     &:hover {
+//         cursor: pointer;
+//         transform: scale(1.1);
+//     }
+
+//     &:focus {
+//         cursor: pointer;
+//         transform: scale(1.1);
+//     }
+// }
