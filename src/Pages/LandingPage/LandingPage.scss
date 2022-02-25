@@ -43,13 +43,26 @@
     font-size: 1.5vw;
     &:hover {
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.2);
+        background-color: whitesmoke;
+        color: black;  
+        border: 2px solid black; 
+        transition: 0.3s all;
     }
 
     &:focus {
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.2);
+        background-color: whitesmoke;
+        color: black;  
+        border: 2px solid black;
+        transition: 0.3s all;
     }
+}
+
+.fade-in-fwd {
+    -webkit-animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 

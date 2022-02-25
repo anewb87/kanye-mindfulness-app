@@ -1,20 +1,17 @@
 @use '../../SASS/keyframes';
 
 .feature-page {
-    background-color: #702880;
+    background-image: url('../../Assets/sky.jpg');
+    background-size: cover;
     width: 100vw;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
-    font-weight: 600;
-}
-
-p {
-    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-tiles {
-    width: 100vw;
+    align-self: center;
+    width: 75vw;
     height: 75vh;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -23,27 +20,47 @@ p {
 }
 
 .bear-image {
-    height: 80%;
-    width: 80%;
+    width: 350px;
     border-radius: 25px;
-    
-    //  &:hover {
-    //     cursor: pointer;
-    //     transform: scale(1.1);
-    //     border: whitesmoke solid 6px;
-    //     border-radius: 10%;
-    //     transition: all 0.3s;
-        
-    //     // background-image: url('../../Assets/Bears/bw-mood.jpg');
-    // }
+    // box-shadow: 9px 9px 23px 0px rgba(248,134,80,0.65)
+    box-shadow: 9px 9px 31px 10px rgba(95,28,115,0.72)
 
-    // &:focus {
-    //     cursor: pointer;
-    //     transform: scale(1.1);
-    //     border: whitesmoke solid 6px;
-    //     border-radius: 10%;
-    //     transition: all 0.3s;
-    // }
+
+}
+
+.dashboard-link {
+    color: white;
+    background-color: #F88650;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2vw;
+    border-radius: 10px;
+    box-shadow: 9px 9px 31px 8px rgba(95,28,115,0.72);
+
+     &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        background-color: white;
+        color: #F88650;  
+        transition: 0.3s all;
+    }
+
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.2);
+        background-color: white;
+        color: #F88650; 
+        transition: 0.3s all; 
+    }
+}
+
+.dashboard-btn-section {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .flip-container {
@@ -65,10 +82,6 @@ p {
 	position: absolute;
 	top: 0;
     left: 0;
-    // color: cornSilk;
-    // text-align: center;
-    // font: 3em/240px 'Helvetica Neue', Helvetica, sans-serif;
-    // box-shadow: -5px 5px 5px #aaa;
 }
 
 .front {
@@ -81,45 +94,20 @@ p {
     transform: rotateY(180deg);
 }
 
-.slide-right {
-	-webkit-animation: slide-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide-up {
+	-webkit-animation: slide-up 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-up 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.slide-left {
-	-webkit-animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide-down {
+	-webkit-animation: slide-down 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-down 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-// .bear-hover {
-//     width: 30px;
-// }
-
-// .overlay {
-//     position: absolute;
-//     // top: 0;
-//     // left: 0;
-//     // right: 0;
-//     // bottom: 0;
-//     // opacity: 0;
-//     transition: opacity 0.4s ease-in-out;
-//     background: black;
-//     cursor: pointer;
-// }
-
-// .content {
-//     position: absolute;
-//     // top: 50%;
-//     // left: 50%;
-//     transform: translate(-50%, -50%);
-//     color: white;
-//     text-align: center;
-// }
-
-// container:hover .overlay {
-//     opacity: 0.8s
-// }
-
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.75s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.75s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 //This block of code would add words on hover. They do not consistenly show up unfortunately so I thought it would be best to revisit.
 // .feature-title {
@@ -134,11 +122,4 @@ p {
 //     }
 // }
 
-.dashboard-btn-section {
-    border: 5px yellow solid;
-    width: 100vw;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
