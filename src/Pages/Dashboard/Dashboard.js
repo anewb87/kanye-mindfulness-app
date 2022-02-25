@@ -4,11 +4,15 @@ import Card from "../../Components/Card";
 import MoodCard from "../../Components/MoodCard";
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Nav from "../../Components/Nav";
+import { UserContext } from "../../Contexts/UserContext";
+import JournalContainer from "../../Components/JournalContainer";
+import MoodContainer from "../../Components/MoodContainer";
 
 
 const Dashboard = () => {
 
   const { quote } = useContext(QuoteContext);
+ 
 
   return (
     <section className='dashboard-page'>
@@ -17,17 +21,13 @@ const Dashboard = () => {
       <article data-testid='dashboard-quote' className='dashboard-quote'>
         { quote }
       </article>
-      <section className='stats-section'>
+      {/* <section className='stats-section'>
         <article>Stat 1</article>
         <article>Stat 2</article>
         <article>Stat 3</article>
-      </section>
-      <section className='mood-section' data-testid='mood-section'>
-        <MoodCard />
-      </section>
-      <section className="journal-section">
-        <Card />
-      </section>
+      </section> */}
+      <MoodContainer data-testid='mood-section'/>
+      <JournalContainer />
     </section>
   );
 };

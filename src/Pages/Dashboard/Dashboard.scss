@@ -5,7 +5,7 @@
     align-items: center;
     border: 5px black solid;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #f7e1e9;
     font-family: 'Montserrat', sans-serif;
     color: black;
@@ -46,16 +46,4 @@
         width: 15%;
         height: 15%;
     }
-}
-
-.mood-section {
-    width: 100vw;
-    border: 5px solid red;
-}
-
-.journal-section {
-    width: 100vw;
-    border: 5px solid blue;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
 }
