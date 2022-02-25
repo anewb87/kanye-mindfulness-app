@@ -2,24 +2,14 @@ import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
 import setImages from "../Utilities/SetImages";
 
-const MoodCard = () => {
+const MoodCard = ({ id, date, mood }) => {
 
-    const { mood } = useContext(UserContext);
-
-    const moods = mood.map((feeling) => {
-      return (
-        <article key={feeling.id} data-testid='mood-card'>
-          <h2>{feeling.date}</h2>
-          {setImages(feeling.mood)}
-        </article>
-      )
-    });
-
-    return (
-      <>
-        {moods}
-      </>
-    )
-  }
+return (
+  <article key={id} data-testid='mood-card'>
+    <h4>{date}</h4>
+    {setImages(mood)}
+  </article>
+  )
+}
 
 export default MoodCard;

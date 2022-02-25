@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import { UserContext } from "../Contexts/UserContext";
+import React from "react";
 import './Card.scss'
 
 
 const Card = ({ date, body, id }) => {
   return (
-    <article className='journal-card' key={id}>
+    <article className='journal-card scroll' key={id}>
       <h3>{date}</h3>
       <p>{body}</p>
     </article>
