@@ -5,9 +5,15 @@ import './MoodContainer.scss'
 
 const MoodContainer = () => {
 
-    const { mood } = useContext(UserContext);
+  const { mood } = useContext(UserContext);
+  
+  const last7 = mood.reduceRight((acc, feeling) => {
+    if (acc.length < 7) {
+      acc.push(feeling)
+    } return acc
+  }, []).reverse()
 
-    const moodEntries = mood.map((feeling) => {
+  const moodEntries = last7.map((feeling) => {
       return (
           <MoodCard 
             key={feeling.id}
@@ -16,7 +22,8 @@ const MoodContainer = () => {
           />
       )
     })
-    return (
+  
+  return (
         <section className='mood-container'>
             {moodEntries}
         </section>

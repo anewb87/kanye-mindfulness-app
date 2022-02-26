@@ -3,5 +3,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
+}
+
+.mood-container > article > img {
+    width: 6%;
 }
