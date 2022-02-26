@@ -7,6 +7,7 @@ import Nav from "../../Components/Nav";
 import { UserContext } from "../../Contexts/UserContext";
 import JournalContainer from "../../Components/JournalContainer";
 import MoodContainer from "../../Components/MoodContainer";
+import kanyebearface from "../../Assets/Bears/kanyebearface.png"
 // import { createTime } from "../../Utilities/Date";
 
 
@@ -17,8 +18,11 @@ const Dashboard = () => {
 
   return (
     <section className="dashboard-page">
-      <h2>Welcome, {user}! 💎 </h2>
-      <Nav />
+      <section className='nav-section'>
+        <Nav />
+        <h2>Welcome, {user}!</h2>
+        <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
+      </section>
       <article
         data-testid="dashboard-quote"
         className="dashboard-quote fade-in-fwd"

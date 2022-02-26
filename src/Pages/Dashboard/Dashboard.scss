@@ -8,25 +8,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 600;
     overflow: auto;
 }
 
-.dashboard-page > h2 {
-    font-family: 'Montserrat', sans-serif;
+
+.nav-section {
+    width: 100%;
+    display: flex;
+}
+
+.nav-section > h2,
+.nav-section > a {
+    margin-top: 1em;
     color: black;
     font-weight: 600;
     font-size: x-large;
+    margin-left: 1em;
+}
+
+.bear-face {
+    width: 7%;
+    align-self: flex-end;
 }
 
 .dashboard-quote {
-    // font-style: italic;
     width: 70vw;
     height: 10%;
-    padding: 2%;
-    margin-top: 1em;
+    padding: 1%;
+    margin-top: 2em;
     color: whitesmoke;
     font-weight: 300;
     display: flex;
@@ -40,6 +51,7 @@
 }
 
 .stats-section {
+    margin-top: 1em;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
