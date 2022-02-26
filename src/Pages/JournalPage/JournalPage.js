@@ -32,6 +32,7 @@ const JournalPage = () => {
 
     return (
         <section className='journal-page'>
+            <h3 className='journal-title'>Journal Page</h3>
             <h4>{quote}</h4>
             <form>
                 <textarea
@@ -39,9 +40,12 @@ const JournalPage = () => {
                     type='text'
                     rows="20"
                     cols="50"
-                    onChange={(event) => handleChange(event)} placeholder="How do Kanye's wise words inspire YOU..."></textarea>
+                    onChange={(event) => handleChange(event)} 
+                    placeholder="How do Kanye's wise words inspire YOU..."
+                    required></textarea>
                 <br />
-                <Link to={'/dashboard'}onClick={createEntry}>Submit</Link>
+                <button className='journal-button' onClick={createEntry} type='submit'>Submit</button>
+                {/* <Link to={'/dashboard'}onClick={createEntry}>Submit</Link> */}
             </form>
         </section>
     );
