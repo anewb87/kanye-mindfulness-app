@@ -7,16 +7,17 @@ import Nav from "../../Components/Nav";
 import { UserContext } from "../../Contexts/UserContext";
 import JournalContainer from "../../Components/JournalContainer";
 import MoodContainer from "../../Components/MoodContainer";
+// import { createTime } from "../../Utilities/Date";
 
 
 const Dashboard = () => {
 
   const { quote } = useContext(QuoteContext);
- 
+  const { user } = useContext(UserContext);
 
   return (
     <section className='dashboard-page'>
-      <h2>Welcome, User! 💎 </h2>
+      <h2>Welcome, {user}! 💎 </h2>
       <Nav />
       <article data-testid='dashboard-quote' className='dashboard-quote'>
         { quote }
