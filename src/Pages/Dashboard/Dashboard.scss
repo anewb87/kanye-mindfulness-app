@@ -1,41 +1,68 @@
+@use '../../SASS/keyframes';
+
 .dashboard-page {
     background-image: url('../../Assets/sky.jpg');
     background-size: cover;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 600;
+    overflow: auto;
 }
 
-.dashboard-page > h2 {
-    font-family: 'Montserrat', sans-serif;
+.nav-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.welcome {
+    color: whitesmoke;
+    text-shadow: 3px 4px 5px rgba(0,0,0,0.56);
+}
+
+
+.nav-section {  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
     color: black;
     font-weight: 600;
     font-size: x-large;
 }
 
-.dashboard-quote {
-    font-style: italic;
-    width: 35%;
-    height: 10%;
-    padding: 2%;
-    background-color: whitesmoke;
-    color: black;
-    font-weight: 300;
-    font-style: italic;
-    border-radius: 10%;
+.bear-logo {
     display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+}
+
+.bear-face {
+    width: 15%;
+}
+
+.dashboard-quote {
+    width: 70vw;
+    height: 10%;
+    padding: 1%;
+    margin-top: 2em;
+    color: whitesmoke;
+    font-weight: 300;
+    display: flex;
+    background-color:  rgba(95,28,115,0.3);
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    font-size: 2em;
+    text-shadow: 3px 4px 5px rgba(0,0,0,0.56);
 }
 
 .stats-section {
+    margin-top: 1em;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -45,4 +72,9 @@
         width: 15%;
         height: 15%;
     }
+}
+
+.mood-card > h4 {
+    margin-bottom: 5%;
+    color: whitesmoke;
 }

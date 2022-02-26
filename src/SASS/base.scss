@@ -5,3 +5,8 @@
 html {
     font-family: 'Montserrat', sans-serif;
 }
+
+.fade-in-fwd {
+    -webkit-animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
