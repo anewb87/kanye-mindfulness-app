@@ -37,7 +37,7 @@ const MoodPage = () => {
     }
 
     return (
-      <section className="mood-page">
+      <section className="mood-page" data-testid="mood-page">
         <h2>Mood Page</h2>
         <h4>How ya feeling today</h4>
         {setImages(currentMood)}

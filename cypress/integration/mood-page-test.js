@@ -3,7 +3,12 @@ describe('Mood page', () => {
     cy.visit('http://localhost:3000/mood')
   });
 
-  it('Should have a Kanye face', () => {
+  it('Should have a cook Kanye album-art inspired background image', () => {
+    cy.get('[data-testid=mood-page]')
+      .should('have.css', 'background-image')
+  });
+
+  it('Should display a Kanye mood face', () => {
     cy.get('img')
       .should('have.attr', 'src', '/static/media/kanye3.42c9905149cdaf49e335.png')
   });

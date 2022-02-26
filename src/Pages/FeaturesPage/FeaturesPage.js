@@ -14,8 +14,8 @@ const FeaturesPage = () => {
     return (
         <section className='feature-page'>
             <section className='feature-tiles'>
-                <Link to={'/mood'} style={linkStyle} className='slide-up feature-link'>
-                    <div className='flip-container' >
+                <Link to={'/mood'} style={linkStyle} className='slide-up feature-link' data-testid='single-feature-tile'>
+                    <div className='flip-container'>
                         <div className='flipper'>
                             <div className='front'>
                                 <img className='bear-image' src={moodBear} alt='Mood Bear icon link to vibe check in page.'/>
@@ -26,7 +26,7 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to={'/journal'} style={linkStyle} className='slide-down feature-link'>
+                <Link to={'/journal'} style={linkStyle} className='slide-down feature-link' data-testid='single-feature-tile'>
                     <div className='flip-container'>
                         <div className='flipper'>
                             <div className='front'>
