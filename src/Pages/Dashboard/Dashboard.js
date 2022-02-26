@@ -18,10 +18,14 @@ const Dashboard = () => {
 
   return (
     <section className="dashboard-page">
-      <section className='nav-section'>
-        <Nav />
-        <h2>Welcome, {user}!</h2>
-        <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
+      <section className='nav-container'>
+        <div className='nav-section'>
+          <Nav />
+          <h2 className='welcome'>Welcome, {user}!</h2>
+        </div>
+        <div className='bear-logo'>
+          <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
+        </div>
       </section>
       <article
         data-testid="dashboard-quote"

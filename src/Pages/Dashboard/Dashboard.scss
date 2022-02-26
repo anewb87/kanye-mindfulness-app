@@ -13,24 +13,35 @@
     overflow: auto;
 }
 
-
-.nav-section {
+.nav-container {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.welcome {
+    color: whitesmoke;
+    text-shadow: 3px 4px 5px rgba(0,0,0,0.56);
 }
 
-.nav-section > h2,
-.nav-section > a {
+
+.nav-section {  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 1em;
     color: black;
     font-weight: 600;
     font-size: x-large;
-    margin-left: 1em;
+}
+
+.bear-logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
 }
 
 .bear-face {
-    width: 7%;
-    align-self: flex-end;
+    width: 15%;
 }
 
 .dashboard-quote {
