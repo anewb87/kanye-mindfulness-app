@@ -5,7 +5,7 @@ export const UserContext = createContext()
 
 const UserProvider = (props) => {
 
-    const [user, setUser] = useState('')
+    const [user, setUser] = useState('');
 
     const [journal, setJournal] = useState([]);
 
