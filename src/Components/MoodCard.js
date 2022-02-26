@@ -4,7 +4,7 @@ import setImages from "../Utilities/SetImages";
 
 const MoodCard = ({ id, date, mood, time }) => {
 return (
-  <article key={id} data-testid='mood-card'>
+  <article key={id} className='mood-card' data-testid='mood-card'>
     <h4>{date}</h4>
     <h4>{time}</h4>
     {setImages(mood)}

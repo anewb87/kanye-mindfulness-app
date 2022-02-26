@@ -20,6 +20,7 @@ const MoodContainer = () => {
             key={feeling.id}
             date={feeling.date}
             mood={feeling.mood}
+            time={feeling.time}
           />
       )
     })

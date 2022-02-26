@@ -1,10 +1,16 @@
 .mood-container {
-    width: 100vw;
+    margin: 3% 0 3% 0;
+    width: 90vw;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .mood-container > article > img {
-    width: 6%;
+    width: 50%;
+}
+
+.mood-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
