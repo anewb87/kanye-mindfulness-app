@@ -10,6 +10,17 @@
     flex-direction: column;
     align-items: center;
     // overflow: auto;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s all;
+    }
+
+    &:focus {
+      transform: scale(1.1);
+      transition: 0.3s all;
+      border: 5px solid #F88650;
+
+    }
 }
 
 .scrollbar {
