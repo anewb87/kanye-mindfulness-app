@@ -17,6 +17,15 @@ const Nav = () => {
         setClicked(!clicked)
     }
 
+    const linkStyle = {
+        // width: '350px',
+        // backgroundImage: 'url(kanyebearface)',
+        // display: 'block',
+        // height: '32px',
+        // width: '32px'
+
+    }
+
     return (
         <>
             <nav className='nav-container'>
@@ -26,9 +35,11 @@ const Nav = () => {
                     </button>
                     <h2 className='welcome'>Welcome, {user}!</h2>
                 </section>
-                    <Link to='/features' className='bear-logo'>
+                <span className='bear-logo'>
+                    <NavLink to='/features'>
                         <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
-                    </Link>
+                    </NavLink>
+                </span>
             </nav>
             {clicked && <HamburgerMenu/>}
         </>
