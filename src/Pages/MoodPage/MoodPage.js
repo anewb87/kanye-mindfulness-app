@@ -5,7 +5,7 @@ import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
-import { createDate } from '../../Utilities/Date';
+import { createDate, createTime } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
 import setImages from '../../Utilities/SetImages';
 
@@ -21,13 +21,14 @@ const MoodPage = () => {
     const handleChange = (value) => {
         setCurrentMood(value)
     }
-
+    console.log(createDate())
     const handleSubmit = () => {
         const newMood = {
             id: Date.now(),
+            time: createTime(),
             date: createDate(),
             mood: currentMood,
-            type: 'mood'
+            type: 'mood',
         };
 
 

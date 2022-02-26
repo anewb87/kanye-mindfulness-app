@@ -6,5 +6,11 @@ export const createDate = () => {
   return today = mm + "/" + dd + "/" + yyyy;
 };
 
+export const createTime = () => {
+  let today = new Date();
+  console.log(today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+  let time = String(today.getHours() + ":" + today.getMinutes())
+  return time;
+};
 
 
