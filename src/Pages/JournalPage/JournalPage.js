@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
+import { ErrorContext } from '../../Contexts/ErrorContext';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 const JournalPage = () => {
 
     const [currentJournal, setCurrentJournal] = useState();
+    const { error, setError } = useContext(ErrorContext);
 
     const { quote } = useContext(QuoteContext);
     const { journal, setJournal } = useContext(UserContext);
@@ -28,10 +31,19 @@ const JournalPage = () => {
 
         updateUser(newEntry)
             .then(entry => setJournal([...journal, entry]))
+            .catch(err => setError(err))
     };
 
-    return (
-        <section className='journal-page'>
+     const determineDisplay = () => {
+       if (error) {
+         return (
+           <>
+             <ErrorPage />
+           </>
+         );
+       } else {
+           return (
+             <section className='journal-page'>
             <h4>{quote}</h4>
             <form>
                 <textarea
@@ -44,6 +56,14 @@ const JournalPage = () => {
                 <Link to={'/dashboard'}onClick={createEntry}>Submit</Link>
             </form>
         </section>
+        );
+       }
+     };
+
+    return (
+        <>
+            {determineDisplay()}
+        </>
     );
 };
 

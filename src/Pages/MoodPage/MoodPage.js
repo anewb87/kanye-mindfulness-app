@@ -8,12 +8,15 @@ import { Link } from 'react-router-dom';
 import { createDate, createTime } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
 import setImages from '../../Utilities/SetImages';
+import { ErrorContext } from '../../Contexts/ErrorContext';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 
 const MoodPage = () => {
 
-    const { quote } = useContext(QuoteContext);
-    const [ currentMood, setCurrentMood ] = useState(3);
+  const { quote } = useContext(QuoteContext);
+  const [currentMood, setCurrentMood] = useState(3);
+  const { error, setError } = useContext(ErrorContext);
 
     const { mood, setMood } = useContext(UserContext);
 
@@ -21,7 +24,7 @@ const MoodPage = () => {
     const handleChange = (value) => {
         setCurrentMood(value)
     }
-    console.log(createDate())
+  
     const handleSubmit = () => {
         const newMood = {
             id: Date.now(),
@@ -33,11 +36,21 @@ const MoodPage = () => {
 
 
         updateUser(newMood)
-            .then(entry => setMood([...mood, entry]))
+          .then(entry => setMood([...mood, entry]))
+          .catch(err => setError(err))
     }
-
-    return (
-      <section className="mood-page" data-testid="mood-page">
+  
+    
+    const determineDisplay = () => {
+      if (error) {
+        return (
+          <>
+            <ErrorPage />
+          </>
+        );
+      } else {
+        return (
+           <section className="mood-page" data-testid="mood-page">
         <h2>Mood Page</h2>
         <h4>How ya feeling today</h4>
         {setImages(currentMood)}
@@ -66,6 +79,15 @@ const MoodPage = () => {
           Submit
         </Link>
       </section>
+          
+        );
+      }
+    };
+
+  return (
+    <>
+      {determineDisplay()}
+    </>
     );
 };
 

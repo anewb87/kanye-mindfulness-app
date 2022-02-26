@@ -9,25 +9,28 @@ import JournalPage from './Pages/JournalPage/JournalPage';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import MoodPage from './Pages/MoodPage/MoodPage';
 import './SASS/base.scss'
+import ErrorProvider from './Contexts/ErrorContext';
 
 
 const App = () => {
   return (
-    <QuoteProvider>
-      <UserProvider>
-        <div className="App">
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/journal" component={JournalPage} />
-            <Route exact path="/features" component={FeaturesPage} />
-            <Route exact path="/mood" component={MoodPage} />
-            <Route exact path="/error" component={ErrorPage} />
-            <Redirect to="/error" />
-          </Switch>
-        </div>
-      </UserProvider>
-    </QuoteProvider>
+    <ErrorProvider>
+      <QuoteProvider>
+        <UserProvider>
+          <div className="App">
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/journal" component={JournalPage} />
+              <Route exact path="/features" component={FeaturesPage} />
+              <Route exact path="/mood" component={MoodPage} />
+              <Route exact path="/error" component={ErrorPage} />
+              <Redirect to="/error" />
+            </Switch>
+          </div>
+        </UserProvider>
+      </QuoteProvider>
+    </ErrorProvider>
   );
 }
 
