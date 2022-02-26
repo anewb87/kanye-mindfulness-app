@@ -16,18 +16,21 @@ const Dashboard = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <section className='dashboard-page'>
+    <section className="dashboard-page">
       <h2>Welcome, {user}! 💎 </h2>
       <Nav />
-      <article data-testid='dashboard-quote' className='dashboard-quote'>
-        { quote }
+      <article
+        data-testid="dashboard-quote"
+        className="dashboard-quote fade-in-fwd"
+      >
+        "{quote}"
       </article>
       {/* <section className='stats-section'>
         <article>Stat 1</article>
         <article>Stat 2</article>
         <article>Stat 3</article>
       </section> */}
-      <MoodContainer data-testid='mood-section'/>
+      <MoodContainer data-testid="mood-section" />
       <JournalContainer />
     </section>
   );

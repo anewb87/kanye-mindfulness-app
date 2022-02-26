@@ -1,3 +1,5 @@
+@use '../../SASS/keyframes';
+
 .dashboard-page {
     background-image: url('../../Assets/sky.jpg');
     background-size: cover;
@@ -9,7 +11,7 @@
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 600;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .dashboard-page > h2 {
@@ -20,20 +22,21 @@
 }
 
 .dashboard-quote {
-    font-style: italic;
-    width: 35%;
+    // font-style: italic;
+    width: 70vw;
     height: 10%;
     padding: 2%;
-    background-color: whitesmoke;
-    color: black;
+    margin-top: 1em;
+    color: whitesmoke;
     font-weight: 300;
-    font-style: italic;
-    border-radius: 10%;
     display: flex;
+    background-color:  rgba(95,28,115,0.3);
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    font-size: 2em;
+    text-shadow: 3px 4px 5px rgba(0,0,0,0.56);
 }
 
 .stats-section {
@@ -46,4 +49,9 @@
         width: 15%;
         height: 15%;
     }
+}
+
+.mood-card > h4 {
+    margin-bottom: 5%;
+    color: whitesmoke;
 }

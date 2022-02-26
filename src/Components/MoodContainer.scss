@@ -7,6 +7,8 @@
 
 .mood-container > article > img {
     width: 50%;
+    -webkit-filter: drop-shadow(10px 11px 5px  rgba(0,0,0,0.56));
+    filter: drop-shadow(10px 11px 5px rgba(0,0,0,0.56));
 }
 
 .mood-card {
