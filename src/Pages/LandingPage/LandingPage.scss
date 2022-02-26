@@ -16,9 +16,11 @@
 
 .title {
     font-size: 12vw;
+    text-shadow: 2px 1px 10px  black;
 }
 
 .open-quote {
+    color: black;
     position: absolute;
     top: 73%;
     font-size: 2vw;
@@ -26,7 +28,7 @@
     height: 38%;
     align-self: center;
     text-align: center;
-    text-shadow: 2px 1px 10px  black;
+    text-shadow: 2px 1px 10px  white;
     margin-top: 3%
 }
 
