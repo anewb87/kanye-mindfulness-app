@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { createDate, createTime } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
 import setImages from '../../Utilities/SetImages';
+import Nav from "../../Components/Nav";
 
 
 const MoodPage = () => {
@@ -37,6 +38,7 @@ const MoodPage = () => {
 
     return (
       <section className="mood-page" data-testid="mood-page">
+        <Nav/>
         <h1 className='vibes'>Vibe Check</h1>
         <h2 className='feeling'>How ya feeling today?</h2>
         {setImages(currentMood)}
