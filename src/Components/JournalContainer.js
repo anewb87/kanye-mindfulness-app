@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { UserContext } from '../Contexts/UserContext';
 import Card from './Card';
 import './JournalContainer.scss';
+import { deleteJournalEntry } from '../apiCall';
 
 
 const JournalContainer = () => {
@@ -13,6 +14,8 @@ const JournalContainer = () => {
                 date={entry.date}
                 body={entry.body}
                 key={entry.id}
+                id={entry.id}
+                deleteJournalEntry={deleteJournalEntry}
             />
         )
     });
