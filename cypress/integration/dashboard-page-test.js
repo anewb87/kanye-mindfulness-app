@@ -46,4 +46,5 @@ describe('Dashboard page', () => {
       .route("/features")
   });
 
+  
 })

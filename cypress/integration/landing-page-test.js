@@ -16,7 +16,7 @@ describe('Landing page', () => {
   });
 
   it('Should show us a Kanye quote', () => {
-    cy.get('h3')
+    cy.get('h2')
       .should('have.text', '"You may be talented, but you’re not Kanye West."')
   });
 
