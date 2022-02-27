@@ -1,7 +1,8 @@
 describe('Dashboard page', () => {
     beforeEach(() => {
-        cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
-        cy.visit('http://localhost:3000/dashboard')
+      cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
+      cy.intercept('GET', 'https://localhost:4020', { fixture: 'kanyeQuote.json' })
+      cy.visit('http://localhost:3000/dashboard')
     });
 
     it('Should welcome a user, display the quote of the day, and have navigation buttons to navigate to the mood page', () => {
@@ -46,5 +47,16 @@ describe('Dashboard page', () => {
       .route("/features")
   });
 
-  
+  it('Should see no more than 7 of my past moods', () => {
+    cy.get("[class=roll-in-left]")
+      .its('length')
+      .should('be.lessThan', 8)
+  });
+
+  it('Should display my journal entries, and have a method to delete them', () => {
+    cy.get("[data-testid=journal-container]")
+      .get("[data-testid=journal-card]")
+      .should("exist")
+
+  })
 })

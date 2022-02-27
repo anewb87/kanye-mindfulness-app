@@ -21,7 +21,7 @@ const JournalContainer = () => {
     });
     
     return (
-        <section className='journal-container'>
+        <section className='journal-container' data-testid='journal-container'>
             {entries}
         </section>
     )
