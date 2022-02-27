@@ -10,23 +10,23 @@ const setImages = (mood) => {
     switch(mood) {
         case 1:
             emoji= kanye1;
-            emotion='sad kanye face'
+            emotion='Sad and Devastated Kanye Face on slider';
             break;
         case 2:
            emoji= kanye2;
-           emotion= 'kinda sad kanye face'
+           emotion= 'Somewhat Sad Kanye Face on slider';
            break;
         case 3:
             emoji= kanye3;
-            emotion='neutral kanye face'
+            emotion='Neutral Kanye Face on slider';
             break;
         case 4:
             emoji= kanye4;
-            emotion='kinda happy kanye face'
+            emotion='Somewhat Happy Kanye Face on slider';
             break;
         case 5:
             emoji= kanye5;
-            emotion='very happy kanye face'
+            emotion='Extremely Happy Kanye Face on slider';
             break;
 
     }

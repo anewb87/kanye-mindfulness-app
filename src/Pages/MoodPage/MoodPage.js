@@ -37,7 +37,7 @@ const MoodPage = () => {
 
     return (
       <section className="mood-page" data-testid="mood-page">
-        <h1 className='vibes'>CHECK YOUR VIBES</h1>
+        <h1 className='vibes'>Vibe Check</h1>
         <h2 className='feeling'>How ya feeling today?</h2>
         {setImages(currentMood)}
         <section style={{ width: "500px" }}>
