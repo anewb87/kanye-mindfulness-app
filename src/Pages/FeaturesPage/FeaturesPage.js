@@ -38,8 +38,6 @@ const FeaturesPage = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to={'/journal'} style={linkStyle}>
-                </Link>
             </section>
             <section className='dashboard-btn-section'>
                 <Delay>

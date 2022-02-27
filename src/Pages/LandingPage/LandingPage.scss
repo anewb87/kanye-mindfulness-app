@@ -1,11 +1,7 @@
-// @import '../../SASS/fade-in'
-// @import './fade-in.scss'
-
-
 .landing-page {
-    color: white;
     width: 100vw;
     height: 100vh;
+    color: white;
     background-image: url('https://thelodirampage.com/wp-content/uploads/2018/10/Screenshot-4-475x267.png');
     background-size: cover;
     background-position: center center;
@@ -62,29 +58,6 @@
     }
 }
 
-// .fade-in-fwd {
-//     -webkit-animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-//             animation: fade-in-fwd 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-// }
-
-
-// button {
-//     font-family: 'Montserrat', sans-serif;
-//     color: whitesmoke;
-//     font-weight: 600;
-//     width: 200px;
-//     height: 65px;
-//     box-shadow: none;
-//     border: 3px white solid;
-//     border-radius: 10px;
-
-//     &:hover {
-//         cursor: pointer;
-//         transform: scale(1.1);
-//     }
-
-//     &:focus {
-//         cursor: pointer;
-//         transform: scale(1.1);
-//     }
-// }
+.quote-size {
+    font-size: 1.3em;
+}
