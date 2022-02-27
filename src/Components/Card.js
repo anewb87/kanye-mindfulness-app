@@ -23,7 +23,7 @@ const Card = ({ date, body, id, deleteJournalEntry }) => {
         <button className='delete-btn' onClick={() => deleteEntry(id)}>
           <img src={deleteBtn} alt="Delete button"/>
         </button>
-      <h3>{date}</h3>
+      <p className='date'>{date}</p>
       <p>{body}</p>
     </article>
   )

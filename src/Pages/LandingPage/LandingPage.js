@@ -19,7 +19,7 @@ const LandingPage = () => {
                 </Link>
             </Delayed>
             <article className='open-quote fade-in-fwd'>
-                <h3>"{quote}"</h3>
+                <h2 className='quote-size'>"{quote}"</h2>
             </article>
         </section>
 
