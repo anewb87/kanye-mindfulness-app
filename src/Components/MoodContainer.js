@@ -23,7 +23,7 @@ const MoodContainer = () => {
             time={feeling.time}
           />
       )
-    })
+  })
   
   return (
         <section className='mood-container'>

@@ -34,7 +34,7 @@ describe('Mood page', () => {
       .click()
       .url()
       .should('include', '/dashboard')
-    cy.get('[data-testid=mood-card]')
+    cy.get('[data-testid=roll-in-left]')
       .its('length')
       .should('be.gt', 4)
   });

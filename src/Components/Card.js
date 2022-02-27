@@ -19,7 +19,10 @@ const Card = ({ date, body, id, deleteJournalEntry }) => {
   }
 
   return (
-    <article className='journal-card scrollbar' key={id}>
+    <article
+      className='journal-card scrollbar'
+      data-testid='journal-card'
+      key={id}>
         <button className='delete-btn' onClick={() => deleteEntry(id)}>
           <img src={deleteBtn} alt="Delete button"/>
         </button>

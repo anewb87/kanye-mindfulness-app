@@ -19,11 +19,26 @@ const JournalContainer = () => {
             />
         )
     });
+
+    const checkJournals = () => {
+        if (entries.length) {
+            return (
+                <section className='journal-container' data-testid='journal-container'>
+                    {entries}
+                </section>
+            )
+        }
+        return (
+            <>
+                <h2 className='no-entries'>No entries yet. Try exploring your thoughts and feelings, and write them down.</h2>
+            </>
+        )
+    }
     
     return (
-        <section className='journal-container'>
-            {entries}
-        </section>
+    <>
+        {checkJournals()}
+    </>
     )
 }
 
