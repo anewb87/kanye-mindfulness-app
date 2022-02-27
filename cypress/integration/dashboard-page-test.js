@@ -1,7 +1,7 @@
 describe('Dashboard page', () => {
     beforeEach(() => {
       cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
-      cy.intercept('GET', 'https://localhost:4020', { fixture: 'kanyeQuote.json' })
+      cy.intercept('GET', 'https://localhost:4020/', { fixture: 'user.json' })
       cy.visit('http://localhost:3000/dashboard')
     });
 
@@ -13,11 +13,11 @@ describe('Dashboard page', () => {
           "have.text",
           '"You may be talented, but you’re not Kanye West."'
         )
-        .get("[class=burger-button]")
+        .get("[data-testid=burger-button]")
         .click()
-        .get("[class=menu]")
+        .get("[data-testid=menu]")
         .should("be.visible")
-        .get("[class=dropdown-items]")
+        .get("[data-testid=dropdown-items]")
         .contains("Vibe Check")
         .click()
         .server()
@@ -27,9 +27,9 @@ describe('Dashboard page', () => {
     });
   
   it('Should be able to navigate to journal page', () => {
-    cy.get("[class=burger-button]")
+    cy.get("[data-testid=burger-button]")
       .click()
-      .get("[class=dropdown-items]")
+      .get("[data-testid=dropdown-items]")
       .contains("Journal")
       .click()
       .server()
@@ -48,18 +48,18 @@ describe('Dashboard page', () => {
   });
 
   it('Should see no more than 7 of my past moods', () => {
-    cy.get("[class=roll-in-left]")
+    cy.get("[data-testid=roll-in-left]")
       .its('length')
       .should('be.lessThan', 8)
   });
 
   it('Should display my journal entries, and have a method to delete them', () => {
     cy.get("[data-testid=journal-card]")
-      .should("have.length", 4)
+      .should("have.length")
       .get("button")
       .last()
       .click()
       .get("[data-testid=journal-card]")
-      .should("have.length", 3)
+      .should("have.length", -1)
   })
 })

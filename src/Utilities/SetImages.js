@@ -33,7 +33,7 @@ const setImages = (mood) => {
     return (
       <>
         <img
-          className="roll-in-left"
+          className="roll-in-left" data-testid='roll-in-left'
         //   className="kanye-mood dashboard-face"
           src={emoji}
           alt={emotion}
