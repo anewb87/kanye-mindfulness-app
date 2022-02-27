@@ -54,9 +54,12 @@ describe('Dashboard page', () => {
   });
 
   it('Should display my journal entries, and have a method to delete them', () => {
-    cy.get("[data-testid=journal-container]")
+    cy.get("[data-testid=journal-card]")
+      .should("have.length", 4)
+      .get("button")
+      .last()
+      .click()
       .get("[data-testid=journal-card]")
-      .should("exist")
-
+      .should("have.length", 3)
   })
 })
