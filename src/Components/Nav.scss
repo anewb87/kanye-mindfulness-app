@@ -56,8 +56,9 @@
 
 .burger-icon {
     width: 2.5em;
-    &:focus {
-        transform: scale(1.2);
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
         transition: 0.3s all;
     }
 }
