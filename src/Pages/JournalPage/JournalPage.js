@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './JournalPage.scss'
 import { QuoteContext } from '../../Contexts/QuoteContext';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
@@ -18,8 +18,14 @@ const JournalPage = () => {
         event.preventDefault();
         setCurrentJournal(event.target.value);
     };
+    const history = useHistory()
+    const updateState = (entry) => {
+      setJournal([...journal, entry]);
+      history.push('/dashboard')
 
-    const createEntry = () => {
+    }
+    const createEntry = (event) => {
+      event.preventDefault();
         const newEntry = {
             id: Date.now(),
             date: createDate(),
@@ -28,7 +34,7 @@ const JournalPage = () => {
         };
 
         updateUser(newEntry)
-            .then(entry => setJournal([...journal, entry]))
+            .then(entry => updateState(entry))
     };
 
     return (
@@ -41,9 +47,11 @@ const JournalPage = () => {
                     type='text'
                     rows="20"
                     cols="50"
-                    onChange={(event) => handleChange(event)} placeholder="How do Kanye's wise words inspire YOU..."></textarea>
+                    onChange={(event) => handleChange(event)}
+                    placeholder="How do Kanye's wise words inspire YOU...">
+                </textarea>
                 <br />
-                <Link to={'/dashboard'}onClick={createEntry}>Submit</Link>
+                <button className='journal-button' onClick={createEntry} type='submit'disabled={!currentJournal}>Submit</button>
             </form>
         </section>
     );
