@@ -32,7 +32,6 @@ const ErrorPage = () => {
             <div className="error">Uh oh! Looks like we've skipped a beat, but let's try again. </div>
             <Link to="/dashboard" className='home-button'>To Dashboard</Link>
         </section>
-
     )
 }
 
