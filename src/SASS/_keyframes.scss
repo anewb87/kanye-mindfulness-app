@@ -112,3 +112,9 @@
     opacity: 1;
   }
 }
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
