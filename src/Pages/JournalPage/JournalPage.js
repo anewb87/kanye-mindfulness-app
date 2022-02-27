@@ -38,7 +38,7 @@ const JournalPage = () => {
 
     return (
         <section className='journal-page'>
-            <h3 className='journal-title'>Journal Page</h3>
+            <h1 className='journal-title'>Journal Page</h1>
             <h4>{quote}</h4>
             <form>
                 <textarea
