@@ -21,7 +21,7 @@ const MoodPage = () => {
     const handleChange = (value) => {
         setCurrentMood(value)
     }
-
+  
     const handleSubmit = () => {
         const newMood = {
             id: Date.now(),
