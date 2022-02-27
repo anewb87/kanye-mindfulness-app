@@ -1,17 +1,15 @@
 .journal-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    // background-image: url('../../Assets/4198173.jpg');
-    // background-image: url('https://preview.redd.it/fw3pctfene911.jpg?width=960&crop=smart&auto=webp&s=cc71153ae1124df1bd74da140e9b423d440bbe04');
-    background-image: url('https://i.pinimg.com/originals/4d/5f/05/4d5f05363f3e3f693278f9580f825718.jpg');
+    background-image: url('../../Assets/ye.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    overflow: scroll;
 
 }
 
@@ -20,7 +18,7 @@
   justify-self: center;
   color: whitesmoke;
   padding: 25px;
-  margin-top: -7%;
+  margin-top: 1.5%;
   text-shadow: black 1px 2px 6px;;
 }
 
@@ -34,7 +32,9 @@
     display: flex;
     justify-content: center;
     opacity: 0.7;
+    margin-top: 10px;
     border: 3px solid #40f765;
+
 }
 
 
@@ -55,10 +55,11 @@ textarea {
     color: black;
     opacity: 0.7;
     border: 3px solid #40f765;
-    &::placeholder{
+    &:placeholder{
       color: black;
     }
 }
+
 .journal-button {
   border: solid 3px #40f765;;
   border-radius: 10px;
@@ -69,4 +70,13 @@ textarea {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   opacity: 75%;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s all;
+  }
+}
+
+.journal-button:disabled {
+  cursor: none;
 }

@@ -1,18 +1,17 @@
 import React, { useContext, useState } from 'react';
 import './MoodPage.scss'
 import { UserContext } from '../../Contexts/UserContext';
-// import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
 import { createDate, createTime } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
 import setImages from '../../Utilities/SetImages';
+import Nav from "../../Components/Nav";
 
 
 const MoodPage = () => {
 
-    // const { quote } = useContext(QuoteContext);
     const [ currentMood, setCurrentMood ] = useState(3);
 
     const { mood, setMood } = useContext(UserContext);
@@ -37,6 +36,7 @@ const MoodPage = () => {
 
     return (
       <section className="mood-page" data-testid="mood-page">
+        <Nav/>
         <h1 className='vibes'>Vibe Check</h1>
         <h2 className='feeling'>How ya feeling today?</h2>
         {setImages(currentMood)}

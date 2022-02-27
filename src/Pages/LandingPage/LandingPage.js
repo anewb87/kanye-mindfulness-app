@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Transition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import './LandingPage.scss';

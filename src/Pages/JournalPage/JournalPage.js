@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
+import Nav from "../../Components/Nav";
 
 const JournalPage = () => {
 
@@ -37,8 +38,9 @@ const JournalPage = () => {
     };
 
     return (
-        <section className='journal-page'>
-            <h1 className='journal-title'>Journal Page</h1>
+      <section className='journal-page'>
+          <Nav />
+          <h3 className='journal-title'>Journal Page</h3>
             <h4>{quote}</h4>
             <form>
                 <textarea

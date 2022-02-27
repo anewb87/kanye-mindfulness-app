@@ -13,7 +13,6 @@ const QuoteProvider = (props) => {
   }, [])
 
   const quoteValue = { quote, setQuote }
-  // const journalValue = {journal, setJournal}
 
   return (
     <QuoteContext.Provider value={ quoteValue }>

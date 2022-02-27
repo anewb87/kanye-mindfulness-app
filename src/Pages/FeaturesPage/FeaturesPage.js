@@ -21,7 +21,7 @@ const FeaturesPage = () => {
                                 <img className='bear-image' src={moodBear} alt='Mood Bear icon link to vibe check in page.'/>
                             </div>
                             <div className='back'>
-                                <img className='bear-image' src={backMoodBear} alt='Other side of mood bear icon link to vibe check in page. ' />
+                                <img className='bear-image' src={backMoodBear} alt='Other side of mood bear icon link to vibe check in page.'/>
                             </div>
                         </div>
                     </div>
