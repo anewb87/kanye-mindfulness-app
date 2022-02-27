@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
 import './Card.scss';
-// import deleteJournalEntry from '../apiCall';
+import deleteBtn from '../Assets/close.png'
 
 
 const Card = ({ date, body, id, deleteJournalEntry }) => {
@@ -20,9 +20,11 @@ const Card = ({ date, body, id, deleteJournalEntry }) => {
 
   return (
     <article className='journal-card scrollbar' key={id}>
+        <button className='delete-btn' onClick={() => deleteEntry(id)}>
+          <img src={deleteBtn} alt="Delete button"/>
+        </button>
       <h3>{date}</h3>
       <p>{body}</p>
-      <button onClick={() => deleteEntry(id)}></button>
     </article>
   )
 }
