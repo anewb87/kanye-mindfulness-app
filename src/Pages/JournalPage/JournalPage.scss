@@ -1,7 +1,6 @@
 .journal-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -21,6 +20,7 @@
     display: flex;
     justify-content: center;
     opacity: 0.7;
+    margin-top: 250px;
 }
 
 

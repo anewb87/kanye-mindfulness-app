@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
 import { createDate } from '../../Utilities/Date';
 import { updateUser } from '../../apiCall';
+import Nav from "../../Components/Nav";
 
 const JournalPage = () => {
 
@@ -31,7 +32,8 @@ const JournalPage = () => {
     };
 
     return (
-        <section className='journal-page'>
+      <section className='journal-page'>
+          <Nav />
             <h4>{quote}</h4>
             <form>
                 <textarea
