@@ -35,7 +35,6 @@
     };
 
     &:focus {
-        cursor: pointer;
         transform: scale(1.2);
         transition: 0.3s all;
     }
@@ -57,17 +56,17 @@
 
 .burger-icon {
     width: 2.5em;
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.2);
-        transition: 0.3s all;
-    };
     &:focus {
-        cursor: pointer;
         transform: scale(1.2);
         transition: 0.3s all;
     }
 }
+
+.rotate-center:hover {
+	-webkit-animation: rotate-center 10s ease-in-out both;
+	        animation: rotate-center 10s ease-in-out both;
+}
+
 .menu {
   position: absolute;
   margin-top: 50px;

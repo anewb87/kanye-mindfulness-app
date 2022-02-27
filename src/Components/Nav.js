@@ -29,7 +29,7 @@ const Nav = () => {
                 </section>
                 <span className='bear-logo bear-focus'>
                     <NavLink to='/features'>
-                        <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
+                        <img className='bear-face rotate-center' alt='bear head wearing glasses' src={kanyebearface} />
                     </NavLink>
                 </span>
             </nav>
