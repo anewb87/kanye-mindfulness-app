@@ -3,7 +3,7 @@
 .mood-page {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -12,7 +12,7 @@
     background-color: #CBDFDF;
     font-family: 'Montserrat', sans-serif;
     color: whitesmoke;
-    
+
     // -webkit-text-stroke: .01px white;
     font-weight: 600;
     font-size: xx-large;
@@ -50,4 +50,3 @@
 	-webkit-animation: roll-in-left 1s ease-out both;
 	        animation: roll-in-left 1s ease-out both;
 }
-
