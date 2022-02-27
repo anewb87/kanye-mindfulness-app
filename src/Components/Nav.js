@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import kanyebearface from "../Assets/Bears/kanyebearface.png";
 import { UserContext } from "../Contexts/UserContext";
 import HamburgerMenu from "./HamburgerMenu";
