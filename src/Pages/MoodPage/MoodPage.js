@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './MoodPage.scss'
 import { UserContext } from '../../Contexts/UserContext';
-import { QuoteContext } from '../../Contexts/QuoteContext';
+// import { QuoteContext } from '../../Contexts/QuoteContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ import setImages from '../../Utilities/SetImages';
 
 const MoodPage = () => {
 
-    const { quote } = useContext(QuoteContext);
+    // const { quote } = useContext(QuoteContext);
     const [ currentMood, setCurrentMood ] = useState(3);
 
     const { mood, setMood } = useContext(UserContext);
@@ -21,7 +21,7 @@ const MoodPage = () => {
     const handleChange = (value) => {
         setCurrentMood(value)
     }
-    console.log(createDate())
+
     const handleSubmit = () => {
         const newMood = {
             id: Date.now(),
@@ -31,15 +31,14 @@ const MoodPage = () => {
             type: 'mood',
         };
 
-
         updateUser(newMood)
             .then(entry => setMood([...mood, entry]))
     }
 
     return (
       <section className="mood-page" data-testid="mood-page">
-        <h2>Mood Page</h2>
-        <h4>How ya feeling today</h4>
+        <h1 className='vibes'>CHECK YOUR VIBES</h1>
+        <h2 className='feeling'>How ya feeling today?</h2>
         {setImages(currentMood)}
         <section style={{ width: "500px" }}>
           <Slider

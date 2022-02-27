@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 5px black solid;
     width: 100vw;
     height: 100vh;
     background-image: url('../../Assets/808heart.png');
@@ -23,9 +22,14 @@
   width: 250px;
 }
 
-.mood-page > h2, 
-.mood-page > h4 {
+.vibes {
   text-shadow: 2px 1px 0  red;
+  font-size: 1.6em;
+}
+
+.feeling {
+  text-shadow: 2px 1px 0  red;
+  font-size: 1.4em;
 }
 
 .mood-page > a {

@@ -17,26 +17,17 @@ const Nav = () => {
         setClicked(!clicked)
     }
 
-    const linkStyle = {
-        // width: '350px',
-        // backgroundImage: 'url(kanyebearface)',
-        // display: 'block',
-        // height: '32px',
-        // width: '32px'
-
-    }
-
     return (
         <>
             <nav className='nav-container'>
                 <section className='nav-section'>
-                    <button className='burger-button' onClick={toggleClick}>
-                        <img className='burger-icon'src={menuIcon} />
+                    <button className='burger-button' onClick={toggleClick} type="button">
+                        <img className='burger-icon'alt='hamburger menu button' src={menuIcon} />
                     </button>
                     <div className="menu">{clicked && <HamburgerMenu/>}</div>
-                    <h2 className='welcome'>Welcome, {user}!</h2>
+                    <h1 className='welcome'>Welcome, {user}!</h1>
                 </section>
-                <span className='bear-logo'>
+                <span className='bear-logo bear-focus'>
                     <NavLink to='/features'>
                         <img className='bear-face' alt='bear head wearing glasses' src={kanyebearface} />
                     </NavLink>

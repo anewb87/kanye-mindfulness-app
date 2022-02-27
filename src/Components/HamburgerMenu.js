@@ -4,8 +4,6 @@ import './HamburgerMenu.scss'
 
 const HamburgerMenu = () => {
 
-
-    
     return(
         <section className='hamburger-menu'>
             <Link to='/mood' className='dropdown-items'>Vibe Check</Link>
