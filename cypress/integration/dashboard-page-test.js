@@ -1,12 +1,9 @@
 describe('Dashboard page', () => {
-    beforeEach(() => {
-      cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
-      cy.intercept('GET', 'https://localhost:4020/', { fixture: 'user.json' })
-      cy.visit('http://localhost:3000/dashboard')
-    });
 
-    it('Should welcome a user, display the quote of the day, and have navigation buttons to navigate to the mood page', () => {
-      cy.get("h1")
+  it('Should welcome a user, display the quote of the day, and have navigation buttons to navigate to the mood page', () => {
+      cy.intercept('GET', 'https://api.kanye.rest/', { fixture: 'kanyeQuote.json' })
+        .visit('http://localhost:3000/dashboard')
+        .get("h1")
         .should("have.text", "Welcome, Kaja!")
         .get("[data-testid=dashboard-quote]")
         .should(
@@ -27,7 +24,8 @@ describe('Dashboard page', () => {
     });
   
   it('Should be able to navigate to journal page', () => {
-    cy.get("[data-testid=burger-button]")
+    cy.visit('http://localhost:3000/dashboard')
+      .get("[data-testid=burger-button]")
       .click()
       .get("[data-testid=dropdown-items]")
       .contains("Journal")
@@ -39,7 +37,8 @@ describe('Dashboard page', () => {
   });
 
   it('Should be able to navigate to the features page', () => {
-    cy.get('a')
+    cy.visit('http://localhost:3000/dashboard')
+      .get('a')
       .first()
       .should('have.attr', 'href', '/features')
       .click()
@@ -48,18 +47,21 @@ describe('Dashboard page', () => {
   });
 
   it('Should see no more than 7 of my past moods', () => {
-    cy.get("[data-testid=roll-in-left]")
+    cy.visit('http://localhost:3000/dashboard')
+      .get("[data-testid=roll-in-left]")
       .its('length')
       .should('be.lessThan', 8)
   });
 
   it('Should display my journal entries, and have a method to delete them', () => {
-    cy.get("[data-testid=journal-card]")
-      .should("have.length")
+    cy.intercept('GET', '/', { fixture: 'user.json' })
+      .visit('http://localhost:3000/dashboard')
+      .get("[data-testid=journal-card]")
+      .should("have.length", 2)
       .get("button")
       .last()
       .click()
       .get("[data-testid=journal-card]")
-      .should("have.length", -1)
+      .should("have.length", 1)
   })
 })

@@ -10,7 +10,16 @@ describe('Journal page', () => {
     });
 
     it('Should be able create a journal entry and submit/POST that entry', () => {
-        cy.get('textarea')
+        cy.intercept('POST', '/', {
+            statusCode: 201,
+            body: {
+                id: Date.now(),
+                date: "02/14/2022",
+                body: 'Kanye. What a guy.',
+                type: 'journal'
+            }
+        })
+            .get('textarea')
             .should('be.visible')
             .type('Kanye. What a guy.')
             .should('have.text', 'Kanye. What a guy.')
