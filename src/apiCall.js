@@ -28,4 +28,12 @@ const checkResponse = (response) => {
     }
 }
 
-export { getQuote, getUser, updateUser }
+const deleteJournalEntry = (entryId) => {
+    console.log('clicked')
+    console.log(entryId)
+    return fetch(`http://localhost:4020/dashboard/${entryId}`, {
+        method: 'DELETE'
+    })
+}
+
+export { getQuote, getUser, updateUser, deleteJournalEntry }
