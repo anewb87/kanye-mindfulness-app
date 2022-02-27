@@ -29,8 +29,6 @@ const checkResponse = (response) => {
 }
 
 const deleteJournalEntry = (entryId) => {
-    console.log('clicked')
-    console.log(entryId)
     return fetch(`http://localhost:4020/dashboard/${entryId}`, {
         method: 'DELETE'
     })
