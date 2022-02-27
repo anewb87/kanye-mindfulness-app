@@ -5,7 +5,7 @@ import './HamburgerMenu.scss'
 const HamburgerMenu = () => {
 
     return(
-        <section className='hamburger-menu swing-in-top-fwd'>
+        <section className='hamburger-menu'>
             <Link to='/mood' className='dropdown-items'>Vibe Check</Link>
             <Link to='/journal' className='dropdown-items'>Journal</Link>
         </section>

@@ -40,6 +40,7 @@ const JournalPage = () => {
     return (
       <section className='journal-page'>
           <Nav />
+          <h3 className='journal-title'>Journal Page</h3>
             <h4>{quote}</h4>
             <form>
                 <textarea
