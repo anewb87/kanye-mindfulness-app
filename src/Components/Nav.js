@@ -33,6 +33,7 @@ const Nav = () => {
                     <button className='burger-button' onClick={toggleClick}>
                         <img className='burger-icon'src={menuIcon} />
                     </button>
+                    <div className="menu">{clicked && <HamburgerMenu/>}</div>
                     <h2 className='welcome'>Welcome, {user}!</h2>
                 </section>
                 <span className='bear-logo'>
@@ -41,7 +42,7 @@ const Nav = () => {
                     </NavLink>
                 </span>
             </nav>
-            {clicked && <HamburgerMenu/>}
+
         </>
     )
 }
