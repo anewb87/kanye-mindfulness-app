@@ -20,8 +20,8 @@ const JournalContainer = () => {
         )
     });
 
-    const checkJournals = (entries) => {
-        if (entries) {
+    const checkJournals = () => {
+        if (entries.length) {
             return (
                 <section className='journal-container' data-testid='journal-container'>
                     {entries}
@@ -30,15 +30,14 @@ const JournalContainer = () => {
         }
         return (
             <>
-                <h2>No entries yet. Try exploring your thoughts and feelings, and write them down</h2>
+                <h2 className='no-entries'>No entries yet. Try exploring your thoughts and feelings, and write them down.</h2>
             </>
         )
-               
     }
     
     return (
     <>
-        {checkJournals(entries)}
+        {checkJournals()}
     </>
     )
 }
