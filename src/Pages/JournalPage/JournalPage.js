@@ -40,8 +40,8 @@ const JournalPage = () => {
     return (
       <section className='journal-page'>
           <Nav />
-          <h3 className='journal-title'>Journal Page</h3>
-            <h4>{quote}</h4>
+          <h3 className='journal-title'>Journal</h3>
+            <h4>"{quote}"</h4>
             <form>
                 <textarea
                     value={currentJournal}
