@@ -18,6 +18,8 @@
     grid-template-columns: 50% 50%;
     align-items: center;
     justify-items: center;
+    border: transparent 10px solid;
+
 }
 
 .bear-image {
@@ -27,13 +29,17 @@
     // box-shadow: 9px 9px 31px 10px rgba(212, 205, 215, 0.4)
 }
 
-.feature-link:focus {
+.feature-link {
     transform: scale(1.2);
     transition: 0.3s all;
-    border: 10px solid #F88650;
+    border: 10px solid transparent;
     border-radius: 35px;
-    width: 350px;
-    height: 350px;
+    width: 348px;
+    height: 348px;
+    &:focus {
+        border: solid 10px #F88650;
+
+    }
 }
 
 .dashboard-link {
@@ -55,11 +61,8 @@
     }
 
     &:focus {
-        cursor: pointer;
-        transform: scale(1.2);
         background-color: white;
         color: #F88650; 
-        transition: 0.3s all; 
     }
 }
 
@@ -76,7 +79,7 @@
 }
 
 .flip-container:hover .flipper,
-.flip-container.hover .flipper {
+    .flip-container.hover .flipper {
 	transform: rotateY(180deg);
 }
 
