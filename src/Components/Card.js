@@ -14,8 +14,9 @@ const Card = ({ date, body, id, deleteJournalEntry }) => {
 
   const deleteEntry = (id) => {
     deleteJournalEntry(id)
-    .then(response => filterEntries(id))
+    .then(response => response.json())
     .catch(err => console.log(err))
+    filterEntries(id)
   }
 
   return (

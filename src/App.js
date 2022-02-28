@@ -13,8 +13,8 @@ import './SASS/base.scss'
 
 const App = () => {
   return (
-    <QuoteProvider>
-      <UserProvider>
+    <UserProvider>
+      <QuoteProvider>
         <div className="App">
           <Switch>
             <Route exact path="/" component={LandingPage} />
@@ -26,8 +26,8 @@ const App = () => {
             <Redirect to="/error" />
           </Switch>
         </div>
-      </UserProvider>
-    </QuoteProvider>
+      </QuoteProvider>
+    </UserProvider>
   );
 }
 
