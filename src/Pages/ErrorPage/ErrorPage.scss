@@ -99,7 +99,7 @@
     z-index: 2;
 
     span {
-      color: #34185c;
+      color: #1f0641;
       font-weight: 900;
       font-size: 25px;
     }
@@ -154,6 +154,12 @@
       bottom: -13px;
       transform: rotate(-20deg);
     }
+  }
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
   }
 }
 

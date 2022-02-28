@@ -45,6 +45,7 @@ const JournalPage = () => {
             <form>
                 <textarea
                     value={currentJournal}
+                    aria-label='textarea'
                     type='text'
                     rows="20"
                     cols="50"

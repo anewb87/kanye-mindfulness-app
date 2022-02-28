@@ -29,7 +29,7 @@ const ErrorPage = () => {
                   </div>
                 </div>
               </div>
-            <div className="error">Uh oh! Looks like we've skipped a beat, but let's try again. </div>
+            <div className="error">Uh oh! Looks like we've skipped a beat and failed. But that's ok, be an inspiration and try again. </div>
             <Link to="/dashboard" className='home-button'>To Dashboard</Link>
         </section>
     )
