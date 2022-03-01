@@ -10,9 +10,12 @@
 ## Abstract
 Getting Mindful with Kanye is a mindfulness application designed for folks who want to take contemporary approach to health and wellness. Users are equipped to navigate through the artistic layout to track their mood,  journal their thoughts and feelings and see their progress on a personal dashboard. It is an accessible React application that utilizes Context API to transfer data between components, has an Express server for our customized data, uses Cypress testing to make sure it all works and has error handling to guide the user through our application incase there is an issue!
 
-INSERT GIF
-INSERT GIF
-INSERT GIF
+![Landing Page](https://media.giphy.com/media/zWcGekCkEZgOE2adoo/giphy.gif)
+![Feature Page](https://media.giphy.com/media/afbrrahUQsLY8e5CIH/giphy.gif)
+![Vibe Check](https://media.giphy.com/media/vXVbpXZfzT8cjctnIE/giphy.gif)
+![Journal](https://media.giphy.com/media/uNMkxNbzjNoxvpeNEN/giphy.gif)
+![Dashboard](https://media.giphy.com/media/mIj16ZZOjrInfaToll/giphy.gif)
+![Error](https://media.giphy.com/media/mvafx8ZKk3b0pR0fEg/giphy.gif)
 
 ## Learning Goals
 - ✅ Implement Context API to display our understanding of new technology
