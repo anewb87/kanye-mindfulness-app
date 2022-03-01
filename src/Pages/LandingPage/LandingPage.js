@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import './LandingPage.scss';
 import Delayed from '../../Components/Delay';
-import ErrorPage from '../ErrorPage/ErrorPage';
 
 const LandingPage = () => {
 
