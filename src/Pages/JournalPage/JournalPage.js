@@ -11,7 +11,7 @@ const JournalPage = () => {
 
     const [currentJournal, setCurrentJournal] = useState();
 
-    const { quote } = useContext(QuoteContext);
+    const { quote, setError } = useContext(QuoteContext);
     const { journal, setJournal } = useContext(UserContext);
 
     const handleChange = (event) => {
@@ -35,6 +35,7 @@ const JournalPage = () => {
 
         updateUser(newEntry)
             .then(entry => updateState(entry))
+            .catch(err => setError(err))
     };
 
     return (

@@ -8,7 +8,7 @@ import MoodContainer from "../../Components/MoodContainer";
 
 const Dashboard = () => {
 
-  const { quote } = useContext(QuoteContext);
+  const { quote, error } = useContext(QuoteContext);
 
   return (
     <section className="dashboard-page">

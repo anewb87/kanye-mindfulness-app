@@ -2,6 +2,7 @@ import React from 'react'
 import './ErrorPage.scss'
 import { Link } from 'react-router-dom';
 
+
 const ErrorPage = () => {
     return (
         <section className='error-page'>
