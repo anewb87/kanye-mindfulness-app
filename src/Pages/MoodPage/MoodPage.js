@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './MoodPage.scss'
+import './MoodPage.scss';
 import { UserContext } from '../../Contexts/UserContext';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -17,22 +17,22 @@ const MoodPage = () => {
     const { mood, setMood } = useContext(UserContext);
 
 
-    const handleChange = (value) => {
-        setCurrentMood(value)
-    }
+  const handleChange = (value) => {
+    setCurrentMood(value)
+  };
   
-    const handleSubmit = () => {
-        const newMood = {
-            id: Date.now(),
-            time: createTime(),
-            date: createDate(),
-            mood: currentMood,
-            type: 'mood',
-        };
+  const handleSubmit = () => {
+    const newMood = {
+      id: Date.now(),
+      time: createTime(),
+      date: createDate(),
+      mood: currentMood,
+      type: 'mood',
+    };
 
-        updateUser(newMood)
-            .then(entry => setMood([...mood, entry]))
-    }
+    updateUser(newMood)
+      .then(entry => setMood([...mood, entry]))
+  };
 
     return (
       <section className="mood-page" data-testid="mood-page">

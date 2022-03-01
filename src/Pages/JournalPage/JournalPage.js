@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './JournalPage.scss'
+import './JournalPage.scss';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
@@ -19,11 +19,12 @@ const JournalPage = () => {
         setCurrentJournal(event.target.value);
     };
     const history = useHistory()
+    
     const updateState = (entry) => {
-      setJournal([...journal, entry]);
-      history.push('/dashboard')
+        setJournal([...journal, entry]);
+        history.push('/dashboard')
+    };
 
-    }
     const createEntry = (event) => {
       event.preventDefault();
         const newEntry = {

@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import moodBear from '../../Assets/Bears/mood-bear.jpg';
 import backMoodBear from '../../Assets/Bears/bw-mood.jpg';
 import journalBear from '../../Assets/Bears/journal-bear.jpg';
 import backJournalBear from '../../Assets/Bears/bw-journal.jpg';
-import Delay from '../../Components/Delay'
+import Delay from '../../Components/Delay';
 import './FeaturesPage.scss';
 
 const FeaturesPage = () => {
     const linkStyle = {
         width: '350px'
-    }
+    };
     return (
         <section className='feature-page'>
             <section className='feature-tiles'>

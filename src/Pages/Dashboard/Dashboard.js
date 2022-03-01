@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import './Dashboard.scss'
+import './Dashboard.scss';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Nav from "../../Components/Nav";
 import JournalContainer from "../../Components/JournalContainer";
@@ -8,7 +8,7 @@ import MoodContainer from "../../Components/MoodContainer";
 
 const Dashboard = () => {
 
-  const { quote, error } = useContext(QuoteContext);
+  const { quote } = useContext(QuoteContext);
 
   return (
     <section className="dashboard-page">
