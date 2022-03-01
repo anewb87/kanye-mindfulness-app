@@ -54,11 +54,12 @@ INSERT GIF
 [Getting Mindful with Kanye](https://radiant-lowlands-33922.herokuapp.com/)
 
 ## Installation Instructions 
-This server needs to be run for the deployed application and if forking this repository)
+This server needs to be run for the deployed application and if forking this repository:
 - now fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api) outside of the project
 - run ```npm install``` in your terminal
 - run ```npm start``` in the Terminal
 
+Repository:
 - fork [this repository](https://github.com/anewb87/kanye-mindfulness-app)
 - copy the SSH clone address
 - run ```git clone [remote-address]``` in your repo
