@@ -10,13 +10,9 @@
 ## Abstract
 Getting Mindful with Kanye is a mindfulness application designed for folks who want to take contemporary approach to health and wellness. Users are equipped to navigate through the artistic layout to track their mood,  journal their thoughts and feelings and see their progress on a personal dashboard. It is an accessible React application that utilizes Context API to transfer data between components, has an Express server for our customized data, uses Cypress testing to make sure it all works and has error handling to guide the user through our application incase there is an issue!
 
-![Home Page](https://media.giphy.com/media/zWcGekCkEZgOE2adoo/giphy.gif)
-![Features Page](https://media.giphy.com/media/afbrrahUQsLY8e5CIH/giphy.gif)
-![Vibe Check](https://media.giphy.com/media/vXVbpXZfzT8cjctnIE/giphy.gif)
-![Journal](https://media.giphy.com/media/uNMkxNbzjNoxvpeNEN/giphy.gif)
-![Dashboard](https://media.giphy.com/media/mIj16ZZOjrInfaToll/giphy.gif)
-![Error](https://media.giphy.com/media/mvafx8ZKk3b0pR0fEg/giphy.gif)
-
+INSERT GIF
+INSERT GIF
+INSERT GIF
 
 ## Learning Goals
 - ✅ Implement Context API to display our understanding of new technology
@@ -54,24 +50,32 @@ Getting Mindful with Kanye is a mindfulness application designed for folks who w
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-## Installation Instructions
+## Deployed Application
+[Getting Mindful with Kanye](https://radiant-lowlands-33922.herokuapp.com/)
+
+## Installation Instructions 
+This server needs to be run for the deployed application and if forking this repository)
+- now fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api) outside of the project
+- run ```npm install``` in your terminal
+- run ```npm start``` in the Terminal
+
 - fork [this repository](https://github.com/anewb87/kanye-mindfulness-app)
 - copy the SSH clone address
 - run ```git clone [remote-address]``` in your repo
 - run ```npm install``` in your terminal
 - run ```npm start``` in the Terminal visit localhost:3000
 
-- now fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api) outside of the project
-- run ```npm install``` in your terminal
-- run ```npm start``` in the Terminal
 
-## Contributors/ Links
+
 
 #### - Project
 - [Project Board](https://github.com/anewb87/kanye-mindfulness-app/projects/1)
 
-#### - AUTHORS:
+#### - AUTHORS
 - Lexy Newby = [LinkedIn](https://www.linkedin.com/in/lexy-newby/) || [GitHub](https://github.com/anewb87)
 - Gabby Recny =[LinkedIn](https://www.linkedin.com/in/gabbyrecny/) || [GitHub](https://github.com/Gabby-Recny)
 - Kai Kuller = [LinkedIn](https://www.linkedin.com/in/kai-kuller/) || [GitHub](https://github.com/kavakai)
 - Thomas Nguyen = [LinkedIn](https://www.linkedin.com/in/tommi-t-nguyen/) || [GitHub](https://github.com/tommi-t-nguyen)
+
+#### - Credits
+- Derek Torsani for an amazing [404 graphic](https://dribbble.com/shots/5497552-404-s-and-808-s)
