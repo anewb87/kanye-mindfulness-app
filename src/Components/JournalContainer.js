@@ -9,8 +9,8 @@ const JournalContainer = () => {
     const { journal } = useContext(UserContext);
 
     const entries = journal.map(entry => {
-        return ( 
-            <Card 
+        return (
+            <Card
                 date={entry.date}
                 body={entry.body}
                 key={entry.id}
@@ -33,13 +33,13 @@ const JournalContainer = () => {
                 <h2 className='no-entries'>No entries yet. Try exploring your thoughts and feelings, and write them down.</h2>
             </>
         )
-    }
+    };
     
     return (
-    <>
-        {checkJournals()}
-    </>
+        <>
+            {checkJournals()}
+        </>
     )
-}
+};
 
 export default JournalContainer;

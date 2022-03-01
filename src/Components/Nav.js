@@ -11,20 +11,20 @@ const Nav = () => {
 
     const { user } = useContext(UserContext);
 
-    const [ clicked, setClicked ] = useState(false)
+    const [clicked, setClicked] = useState(false);
 
     const toggleClick = () => {
         setClicked(!clicked)
-    }
+    };
 
     return (
         <>
             <nav className='nav-container'>
                 <section className='nav-section'>
                     <button className='burger-button' data-testid='burger-button' onClick={toggleClick} type="button">
-                        <img className='burger-icon'alt='hamburger menu button' src={menuIcon} />
+                        <img className='burger-icon' alt='hamburger menu button' src={menuIcon} />
                     </button>
-                    <div className="menu" data-testid='menu'>{clicked && <HamburgerMenu/>}</div>
+                    <div className="menu" data-testid='menu'>{clicked && <HamburgerMenu />}</div>
                     <h1 className='welcome'>Welcome, {user}!</h1>
                 </section>
                 <span className='bear-logo bear-focus'>
@@ -36,7 +36,7 @@ const Nav = () => {
 
         </>
     )
-}
+};
 
 export default Nav;
 

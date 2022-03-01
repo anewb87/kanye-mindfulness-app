@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Contexts/UserContext";
-// import { createDate, createTime } from "../Utilities/Date";
 import MoodCard from "./MoodCard";
-import './MoodContainer.scss'
+import './MoodContainer.scss';
 
 const MoodContainer = () => {
 
@@ -12,24 +11,24 @@ const MoodContainer = () => {
     if (acc.length < 7) {
       acc.push(feeling)
     } return acc
-  }, []).reverse()
+  }, []).reverse();
 
   const moodEntries = last7.map((feeling) => {
-      return (
-          <MoodCard 
-            key={feeling.id}
-            date={feeling.date}
-            mood={feeling.mood}
-            time={feeling.time}
-          />
-      )
-  })
+    return (
+      <MoodCard
+        key={feeling.id}
+        date={feeling.date}
+        mood={feeling.mood}
+        time={feeling.time}
+      />
+    )
+  });
   
   return (
-        <section className='mood-container'>
-            {moodEntries}
-        </section>
-    )
-}
+    <section className='mood-container'>
+      {moodEntries}
+    </section>
+  )
+};
 
 export default  MoodContainer;

@@ -1,12 +1,12 @@
 const getQuote = () => {
     return fetch('https://api.kanye.rest/')
-    .then(response => checkResponse(response))
-}
+        .then(response => checkResponse(response))
+};
 
 const getUser = () => {
     return fetch('http://localhost:4020/')
-    .then(response => checkResponse(response))
-}
+        .then(response => checkResponse(response))
+};
 
 const updateUser = (newPost) => {
     return fetch('http://localhost:4020/', {
@@ -16,8 +16,8 @@ const updateUser = (newPost) => {
         },
         body: JSON.stringify(newPost),
     })
-    .then(response => checkResponse(response))
-}
+        .then(response => checkResponse(response))
+};
 
 
 const checkResponse = (response) => {
@@ -26,12 +26,12 @@ const checkResponse = (response) => {
     } else {
         return response.json()
     }
-}
+};
 
 const deleteJournalEntry = (entryId) => {
     return fetch(`http://localhost:4020/dashboard/${entryId}`, {
         method: 'DELETE'
     })
-}
+};
 
 export { getQuote, getUser, updateUser, deleteJournalEntry }

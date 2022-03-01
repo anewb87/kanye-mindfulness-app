@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import './Dashboard.scss'
+import './Dashboard.scss';
 import { QuoteContext } from '../../Contexts/QuoteContext';
 import Nav from "../../Components/Nav";
 import JournalContainer from "../../Components/JournalContainer";
