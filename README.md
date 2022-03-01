@@ -15,7 +15,7 @@ Getting Mindful with Kanye is a mindfulness application designed for folks who w
 ![Vibe Check](https://media.giphy.com/media/vXVbpXZfzT8cjctnIE/giphy.gif)
 ![Journal](https://media.giphy.com/media/uNMkxNbzjNoxvpeNEN/giphy.gif)
 ![Dashboard](https://media.giphy.com/media/mIj16ZZOjrInfaToll/giphy.gif)
-1[Error](https://media.giphy.com/media/mvafx8ZKk3b0pR0fEg/giphy.gif)
+![Error](https://media.giphy.com/media/mvafx8ZKk3b0pR0fEg/giphy.gif)
 
 
 ## Learning Goals
