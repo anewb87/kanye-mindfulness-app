@@ -18,7 +18,7 @@
   justify-self: center;
   color: whitesmoke;
   padding: 25px;
-  margin-top: 1.5%;
+  font-size: 2em;
   text-shadow: black 1px 2px 6px;;
 }
 
@@ -44,8 +44,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-
-
 }
 
 textarea {
@@ -74,6 +72,13 @@ textarea {
   &:hover {
     transform: scale(1.1);
     transition: 0.3s all;
+    cursor: pointer;
+  }
+
+   &:focus {
+    transform: scale(1.1);
+    transition: 0.3s all;
+    cursor: pointer;
   }
 }
 
