@@ -5,7 +5,7 @@ import deleteBtn from '../Assets/close.png'
 
 
 const Card = ({ date, body, id, deleteJournalEntry }) => {
-  const { journal, setJournal } = useContext(UserContext)
+  const { journal, setJournal, setError } = useContext(UserContext)
 
   const filterEntries = (id) => {
     const filteredJournal = journal.filter(entry =>  entry.id !== id);
@@ -15,7 +15,7 @@ const Card = ({ date, body, id, deleteJournalEntry }) => {
   const deleteEntry = (id) => {
     deleteJournalEntry(id)
     .then(response => response.json())
-    .catch(err => console.log(err))
+    .catch(err => setError(err))
     filterEntries(id)
   }
 
