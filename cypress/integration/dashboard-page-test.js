@@ -32,8 +32,8 @@ describe('Dashboard page', () => {
       .click()
       .server()
       .route("/journal")
-      .get('h1')
-      .contains('Journal Page')
+      .get('h3')
+      .contains('Journal')
   });
 
   it('Should be able to navigate to the features page', () => {
