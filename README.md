@@ -7,6 +7,9 @@
 - [Install Instructions](#instructions)
 - [Authors/Links](#authorslinks)
 
+## Deployed Application
+[Getting Mindful with Kanye](https://radiant-lowlands-33922.herokuapp.com/)
+
 ## Abstract
 Getting Mindful with Kanye is a mindfulness application designed for folks who want to take contemporary approach to health and wellness. Users are equipped to navigate through the artistic layout to track their mood,  journal their thoughts and feelings and see their progress on a personal dashboard. It is an accessible React application that utilizes Context API to transfer data between components, has an Express server for our customized data, uses Cypress testing to make sure it all works and has error handling to guide the user through our application incase there is an issue!
 
@@ -52,9 +55,6 @@ Getting Mindful with Kanye is a mindfulness application designed for folks who w
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-
-## Deployed Application
-[Getting Mindful with Kanye](https://radiant-lowlands-33922.herokuapp.com/)
 
 ## Installation Instructions 
 If you wish to fork both the front and back ends of this project, you will need to fork and clone two separate repositories.
