@@ -4,12 +4,12 @@ const getQuote = () => {
 };
 
 const getUser = () => {
-    return fetch('http://localhost:4020/')
+    return fetch('https://kanye-mindfulness-api.herokuapp.com/')
         .then(response => checkResponse(response))
 };
 
 const updateUser = (newPost) => {
-    return fetch('http://localhost:4020/', {
+    return fetch('https://kanye-mindfulness-api.herokuapp.com/', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
