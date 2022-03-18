@@ -57,8 +57,9 @@ Getting Mindful with Kanye is a mindfulness application designed for folks who w
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 ## Installation Instructions 
-If you wish to fork both the front and back ends of this project, you will need to fork and clone two separate repositories.
-Backend:
+If you wish to fork both the front and back ends of this project, you will need to fork and clone two separate repositories.  
+
+  Backend:
 - fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api)
 - run ```npm install``` in your terminal
 - run ```npm start```
@@ -71,10 +72,11 @@ Frontend:
 - run ```npm start``` then visit localhost:3000
 
 
-#### - Project
+## Project
 - [Project Board](https://github.com/anewb87/kanye-mindfulness-app/projects/1)
+- [Stretch Technology Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-#### - AUTHORS
+## AUTHORS
 - Lexy Newby = [LinkedIn](https://www.linkedin.com/in/lexy-newby/) || [GitHub](https://github.com/anewb87)
 - Gabby Recny =[LinkedIn](https://www.linkedin.com/in/gabbyrecny/) || [GitHub](https://github.com/Gabby-Recny)
 - Kai Kuller = [LinkedIn](https://www.linkedin.com/in/kai-kuller/) || [GitHub](https://github.com/kavakai)
