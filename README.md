@@ -57,19 +57,18 @@ Getting Mindful with Kanye is a mindfulness application designed for folks who w
 [Getting Mindful with Kanye](https://radiant-lowlands-33922.herokuapp.com/)
 
 ## Installation Instructions 
-This server needs to be run for the deployed application and if forking this repository:
-- now fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api) outside of the project
+If you wish to fork both the front and back ends of this project, you will need to fork and clone two separate repositories.
+Backend:
+- fork and clone [this API](https://github.com/Gabby-Recny/kanye-mindfulness-api)
 - run ```npm install``` in your terminal
-- run ```npm start``` in the Terminal
+- run ```npm start```
 
-Repository:
-- fork [this repository](https://github.com/anewb87/kanye-mindfulness-app)
+Frontend:
+- in a separate folder, fork [this repository](https://github.com/anewb87/kanye-mindfulness-app)
 - copy the SSH clone address
-- run ```git clone [remote-address]``` in your repo
+- run ```git clone [remote-address]```
 - run ```npm install``` in your terminal
-- run ```npm start``` in the Terminal visit localhost:3000
-
-
+- run ```npm start``` then visit localhost:3000
 
 
 #### - Project
